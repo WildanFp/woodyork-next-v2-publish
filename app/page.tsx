@@ -256,7 +256,7 @@ export default function Home() {
               Design
             </div>
             <Image
-              src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745764083/DSC06118_nihkv7.jpg"
+              src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745772911/c16_fn9xij.png"
               width={500}
               height={300}
               alt="Project before"
@@ -272,7 +272,7 @@ export default function Home() {
               Reality
             </div>
             <Image
-              src="/DSC01862.jpg?height=200&width=500"
+              src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745772812/KRISTY-02493_temsk5.jpg"
               width={500}
               height={300}
               alt="Project after"
@@ -511,7 +511,7 @@ export default function Home() {
 
         <div className="text-center text-base text-gray-600">
           <AnimatedSection animation="fade-in" delay={400}>
-            ©2023 woodyork. All rights reserved - Produced by voxlabs
+            ©2025 woodyork. All rights reserved - Produced by voxlabs
           </AnimatedSection>
         </div>
       </footer>

@@ -17,7 +17,7 @@ export default function AboutPage() {
   //     name: "Alexander Wright",
   //     position: "Founder & Principal Designer",
   //     image: "/placeholder.svg?height=400&width=400",
-  //     bio: "Alexander brings over 15 years of experience in interior and architectural design. With a background in fine arts and architecture from the Royal College of Art, he founded Woodwork with a vision to create spaces that blend functionality with artistic expression.",
+  //     bio: "Alexander brings over 15 years of experience in interior and architectural design. With a background in fine arts and architecture from the Royal College of Art, he founded woodyork with a vision to create spaces that blend functionality with artistic expression.",
   //     social: {
   //       instagram: "#",
   //       linkedin: "#",
@@ -70,7 +70,7 @@ export default function AboutPage() {
       {/* Navigation */}
       <header className="p-6 flex justify-between items-center">
         <Link href="/" className="text-xl font-light">
-          woodwork
+          woodyork
         </Link>
         <nav className="hidden md:flex space-x-6 text-sm">
           <Link
@@ -331,7 +331,7 @@ export default function AboutPage() {
             <div className="bg-zinc-900 p-8 rounded-sm flex flex-col items-center text-center">
               <Mail className="w-8 h-8 mb-4 text-amber-300" />
               <h3 className="text-lg font-medium mb-2">Email Us</h3>
-              <p className="text-sm text-gray-300">woodwork@gmail.com</p>
+              <p className="text-sm text-gray-300">woodyork@gmail.com</p>
               <p className="text-sm text-gray-300 mt-2">
                 We'll respond within 24 hours
               </p>
@@ -344,7 +344,7 @@ export default function AboutPage() {
       <footer className="py-16 px-4 md:px-8 lg:px-16 border-t border-zinc-900">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="uppercase text-sm mb-4">WOODWORK.</h3>
+            <h3 className="uppercase text-sm mb-4">woodyork.</h3>
             <p className="text-xs text-gray-400 mb-2">
               We're welcoming you always.
             </p>
@@ -444,7 +444,7 @@ export default function AboutPage() {
         </div>
 
         <div className="text-center text-xs text-gray-600">
-          ©2023 Woodwork. All rights reserved - Produced by Volstabs
+          ©2023 woodyork. All rights reserved - Produced by Volstabs
         </div>
       </footer>
     </main>

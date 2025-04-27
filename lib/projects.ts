@@ -57,31 +57,28 @@ export const projects: Project[] = [
     id: "esma-coffee-shop",
     title: "Esma Coffee Shop",
     subtitle: "design interior",
-    image: "/commercial/coffee-shop/esma/1.png?height=300&width=400",
+    image: "/commercial/coffee-shop/esma/placeholder.svg?height=300&width=400",
     category: "commercial",
     subcategory: "coffee-shop",
-    location: "Malang",
+    location: "Downtown, Jakarta",
     area: "120 m²",
-    duration: "2 Weeks",
-    completed: "2022",
-    client: "Esma coffee shop",
+    duration: "8 Weeks",
+    completed: "March 2024",
+    client: "Brew & Bean Co.",
     description: [
       "This artisan coffee shop project was designed to create a welcoming space that balances industrial aesthetics with warm, inviting elements. The client wanted a distinctive environment that would attract coffee enthusiasts and casual visitors alike, while providing a comfortable space for both quick visits and longer stays.",
       "The design incorporates exposed brick walls, polished concrete floors, and wooden elements to create a textural richness that appeals to the senses. Custom-designed furniture pieces were created specifically for the space, including the central communal table and the bar area, which serves as the focal point of the shop.",
       "Lighting was carefully considered to create different moods throughout the day, with pendant lights providing focused illumination over seating areas and the bar, while ambient lighting creates a warm glow throughout the space in the evening hours.",
     ],
-    designImage: "/commercial/coffee-shop/esma/1.png?height=400&width=600",
-    realityImage: "/commercial/coffee-shop/esma/4.png?height=400&width=600",
+    designImage: "/commercial/coffee-shop/esma/placeholder.svg?height=400&width=600",
+    realityImage: "/commercial/coffee-shop/esma/placeholder.svg?height=400&width=600",
     gallery: [
-      "/commercial/coffee-shop/esma/1.png?height=300&width=400",
-      "/commercial/coffee-shop/esma/2.png?height=300&width=400",
-      "/commercial/coffee-shop/esma/3.png?height=300&width=400",
-      "/commercial/coffee-shop/esma/4.png?height=300&width=400",
-      "/commercial/coffee-shop/esma/5.png?height=300&width=400",
-      "/commercial/coffee-shop/esma/6.png?height=300&width=400",
-      "/commercial/coffee-shop/esma/7.png?height=300&width=400",
-      "/commercial/coffee-shop/esma/7A.png?height=300&width=400",
-      "/commercial/coffee-shop/esma/888.png?height=300&width=400",
+      "/commercial/coffee-shop/esma/placeholder.svg?height=300&width=400",
+      "/commercial/coffee-shop/esma/placeholder.svg?height=300&width=400",
+      "/commercial/coffee-shop/esma/placeholder.svg?height=300&width=400",
+      "/commercial/coffee-shop/esma/placeholder.svg?height=300&width=400",
+      "/commercial/coffee-shop/esma/placeholder.svg?height=300&width=400",
+      "/commercial/coffee-shop/esma/placeholder.svg?height=300&width=400",
     ],
     features: [
       "Custom-designed bar and service counter",
@@ -447,7 +444,7 @@ export const projects: Project[] = [
     id: "office-anggraini-kantor",
     title: "Office Area - Mrs. Anggraini",
     subtitle: "Functional and elegant office space designed for productivity",
-    image: "/commercial/office/anggraini/design/2daf0684-138d-475d-a79a-c3ceb0f0995e.jpg",
+    image: "https://res.cloudinary.com/del1pfnko/image/upload/v1745770507/d10_zwhcho.png",
     category: "commercial",
     subcategory: "office",
     location: "Sidoarjo, Tanggulangin",
@@ -460,7 +457,7 @@ export const projects: Project[] = [
       "The design utilizes custom cabinetry and minimalistic furniture to maximize the use of space without making the room feel crowded. Neutral color tones paired with natural lighting create an open and inviting atmosphere.",
       "Material selection focused on durability and easy maintenance, perfect for a working environment requiring longevity and professionalism."
     ],
-    designImage: "/commercial/office/anggraini/design/2daf0684-138d-475d-a79a-c3ceb0f0995e.jpg",
+    designImage: "/https://res.cloudinary.com/del1pfnko/image/upload/v1745770456/E1_d9cvxs.png",
     realityImage: "/commercial/office/anggraini/reality/2daf0684-138d-475d-a79a-c3ceb0f0995e.jpg",
     gallery: [
       "/commercial/office/anggraini/design/2daf0684-138d-475d-a79a-c3ceb0f0995e.jpg",
@@ -509,7 +506,7 @@ export const projects: Project[] = [
     id: "living-room-mrs-shabrina",
     title: "Living Room Mrs. Shabrina",
     subtitle: "Elegant and Functional Living Room Design",
-    image: "/placeholder.jpg",
+    image: "https://res.cloudinary.com/del1pfnko/image/upload/v1745772094/RT1_gbnbdp.png",
     category: "residential",
     subcategory: "living-room",
     location: "Malang",
@@ -522,11 +519,18 @@ export const projects: Project[] = [
       "Spanning 27 square meters, the design blends modern and cozy elements to accommodate family and guests.",
       "A selection of premium materials and custom furniture pieces bring sophistication and functionality to the space.",
     ],
-    designImage: "/placeholder.jpg",
+    designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745772100/RT5_wbauod.png",
     realityImage: "/placeholder.jpg",
     gallery: [
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745772108/S3_lfrwzf.png",
       "/placeholder.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745772107/RT4_xasotq.png",
       "/placeholder.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745772104/RT7_rozuul.png",
+      "/placeholder.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745772103/RT2_nvcefa.png",
+      "/placeholder.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745772101/RT3_jp3xrc.png",
     ],
     features: [
       "Custom-designed sofa with premium upholstery",
@@ -564,7 +568,7 @@ export const projects: Project[] = [
       },
     ],
   },  
-  //Residential Projects Mrs. Titiya
+  //Residential Projects Mrs. Titiya PPPP
   {
     id: "mrs-titiya-project",
     title: "Mrs. Titiya's Interior Design & Build",
@@ -625,68 +629,76 @@ export const projects: Project[] = [
   //Residential Projects Mrs. Kristy
   {
     id: "mrs-kristy-project",
-    title: "Mrs. Kristy's Interior Design & Build",
-    subtitle: "Design Interior & Build Interior",
-    image: "/placeholder.jpg",
+    title: "Open Space Mrs. Kristy",
+    subtitle: "Warm and Functional Family Room Design",
+    image: "https://res.cloudinary.com/del1pfnko/image/upload/v1745773393/C4_ny2s4n.png",
     category: "residential",
-    subcategory: "living-room",
+    subcategory: "family-room",
     location: "Malang, Pakis",
-    area: "38 m²", 
+    area: "38 m²",
     duration: "2 Months",
     completed: "2025",
     client: "Mrs. Kristy",
     description: [
-      "This project aimed to transform a spacious open-plan area into a modern living space that combines comfort and functionality. The design blends the living room, kitchen, and dining area into a single cohesive space.",
-      "A primary focus was on creating a layout that encourages social interaction and makes the most of the available space, with ample storage and practical furniture choices.",
-      "The design uses neutral tones and clean lines to achieve a contemporary aesthetic, while ensuring the space remains inviting and cozy for everyday living."
+      "A cozy and multi-functional open space integrating living room, kitchen, and dining area.",
+      "Designed to create a seamless flow and maximize comfort for family activities.",
+      "Warm tones combined with modern minimalist elements to ensure an inviting atmosphere."
     ],
-    designImage: "/placeholder.jpg",
-    realityImage: "/placeholder.jpg",
+    designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745773400/C1_dbi9gu.png",
+    realityImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745773547/KRISTY-02471_hkznoa.jpg",
     gallery: [
-      "/placeholder.jpg",
-      "/placeholder.jpg"
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745773405/C2_u7vd4k.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745773404/C3_yfbdmu.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745773403/C5_uob0zy.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745773400/C1_dbi9gu.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745773393/C4_ny2s4n.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745773586/KRISTY-02471_ayt2kl.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745773585/KRISTY-02445_syvez3.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745773585/KRISTY-02438_gewpuz.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745773582/KRISTY-02469_mrlmus.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745773577/KRISTY-02440_jesprj.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745773547/KRISTY-02471_hkznoa.jpg",
     ],
     features: [
-      "Open-plan layout that combines living, kitchen, and dining areas",
-      "Modern, space-saving furniture with multifunctional pieces",
-      "Custom lighting fixtures to create a warm, inviting atmosphere"
+      "Open layout concept",
+      "Natural lighting optimization",
+      "Integrated kitchen and dining area"
     ],
     materials: [
-      "Wooden flooring with a natural finish for warmth",
-      "Sleek marble countertops for the kitchen",
-      "Neutral fabric for upholstery and cushions"
+      "Engineered wood flooring",
+      "Quartz countertops",
+      "Textured wall panels"
     ],
     relatedProjects: [
       {
-        id: "modern-apartment-malangs",
-        title: "Modern Apartment Malang",
+        id: "mrs-farida-project",
+        title: "Living Room Mrs. Farida",
         image: "/placeholder.jpg",
         category: "residential",
         subcategory: "living-room"
       },
       {
-        id: "small-villa-malangs",
-        title: "Small Villa Malang",
+        id: "mrs-fira-project",
+        title: "Family Room Mrs. Fira",
         image: "/placeholder.jpg",
         category: "residential",
-        subcategory: "living-room"
+        subcategory: "family-room"
       },
       {
-        id: "luxury-home-malangs",
-        title: "Luxury Home Malang",
+        id: "mrs-aghina-project",
+        title: "Family Room Mrs. Aghnia",
         image: "/placeholder.jpg",
         category: "residential",
-        subcategory: "living-room"
+        subcategory: "family-room"
       }
     ]
-  }
-  ,  
+  },  
   //Residential Projects Mrs. Farida
   {
     id: "mrs-farida-project",
     title: "Mrs. Farida's Interior Design & Build",
     subtitle: "Design Interior & Build Interior",
-    image: "/placeholder.jpg",
+    image: "https://res.cloudinary.com/del1pfnko/image/upload/v1745774107/E2_navmjf.png",
     category: "residential",
     subcategory: "living-room",
     location: "Madura, Pamekasan",
@@ -699,11 +711,21 @@ export const projects: Project[] = [
       "The layout of the living room and other rooms ensures that each area is distinct but flows seamlessly with the rest of the house. Custom furniture and practical storage solutions were incorporated into the design.",
       "Natural materials were used to create a warm and inviting atmosphere, with clean lines and neutral tones to achieve a modern aesthetic."
     ],
-    designImage: "/placeholder.jpg",
-    realityImage: "/placeholder.jpg",
+    designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745774110/E3_kuve2d.png",
+    realityImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745774261/color_2_6_of_90_z4v8fo.jpg",
     gallery: [
-      "/placeholder.jpg",
-      "/placeholder.jpg"
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774099/D8_sw7n1v.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774101/D12_aucffa.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774101/D11_qtpwzf.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774104/D13_ffcibm.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774106/D16_qzodn0.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774107/E2_navmjf.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774250/color_2_1_of_90_lqrtyh.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774252/color_2_7_of_90_y2qyhd.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774261/color_2_6_of_90_z4v8fo.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774266/color_2_2_of_90_m9unfg.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774270/color_2_3_of_90_gmlgdf.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774263/color_2_4_of_90_ihjpyh.jpg",
     ],
     features: [
       "Open-concept living area with multifunctional furniture",
@@ -744,7 +766,7 @@ export const projects: Project[] = [
     id: "mrs-fira-project",
     title: "Kitchen & Dining Area Mrs. Fira",
     subtitle: "Functional and Modern Kitchen & Dining Area Design",
-    image: "/placeholder.jpg",
+    image: "https://res.cloudinary.com/del1pfnko/image/upload/v1745774692/E19_rqflco.png",
     category: "residential",
     subcategory: "kitchen-set", // Subcategory based on the selected area
     location: "Pekalongan",
@@ -757,11 +779,22 @@ export const projects: Project[] = [
       "The design features an open-plan layout with a large kitchen island that connects to the dining area, creating a perfect space for family meals and entertaining guests.",
       "A blend of modern and natural elements was used, ensuring the space is both functional and aesthetically pleasing."
     ],
-    designImage: "/placeholder.jpg",
-    realityImage: "/placeholder.jpg",
+    designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745774691/E14_nqeztj.png",
+    realityImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745774932/Mrs._Fira_12_of_26_uviwuo.jpg",
     gallery: [
-      "/placeholder.jpg",
-      "/placeholder.jpg"
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774780/E31_kpann1.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774775/E23_ov6amk.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774774/E22_ht55zx.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774773/E21_srrju7.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774768/E20_h0rlij.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774692/E19_rqflco.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774691/E14_nqeztj.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774690/E32_xya431.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774940/Mrs._Fira_1_of_26_bke6j8.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774939/Mrs._Fira_10_of_26_ig1aah.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774938/Mrs._Fira_26_of_26_ngi1ma.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774932/Mrs._Fira_12_of_26_uviwuo.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745774931/Mrs._Fira_14_of_26_v0pzpp.jpg",
     ],
     features: [
       "Open-plan kitchen with integrated dining area",
@@ -861,120 +894,129 @@ export const projects: Project[] = [
   //Residential Projects Mrs. Ocha
   {
     id: "mrs-ocha-project",
-    title: "Living Room Mrs. Ocha",
-    subtitle: "Elegant and Cozy Living Room Design",
-    image: "/placeholder.jpg",
+    title: "Master Bedroom Mrs. Ocha",
+    subtitle: "Cozy and Minimalist Master Bedroom Design",
+    image: "https://res.cloudinary.com/del1pfnko/image/upload/v1745777469/KM2_enducu.png",
     category: "residential",
-    subcategory: "living-room", // Based on the area chosen
+    subcategory: "bedroom",
     location: "Sidoarjo",
-    area: "11.3 m²", // Area Living Room
-    duration: "1 year",
+    area: "6.8 m²",
+    duration: "1 Year",
     completed: "2024",
     client: "Mrs. Ocha",
     description: [
-      "The design for the living room emphasizes comfort with modern furniture and a warm ambiance, making it the perfect place for family gatherings and relaxation.",
-      "The layout includes a mix of cozy seating arrangements, soft lighting, and neutral colors to create a welcoming space.",
-      "Design elements such as a minimalist coffee table and stylish rug add a touch of sophistication while maintaining functionality."
+      "A warm and inviting master bedroom with minimalist design touches.",
+      "Maximizing small space functionality without compromising comfort.",
+      "Soft neutral tones enhance the sense of space and relaxation."
     ],
-    designImage: "/placeholder.jpg",
-    realityImage: "/placeholder.jpg",
+    designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745777503/RT2_wnssil.png",
+    realityImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745777725/DSC04571_pv4ndd.jpg",
     gallery: [
-      "/placeholder.jpg",
-      "/placeholder.jpg"
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745777503/RT3_b0bxyz.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745777503/RT3_b0bxyz.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745777499/RT1_nz4wmd.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745777497/KM7_rcfbub.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745777494/KM4_b7npvf.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745777485/KM3_a7jb1l.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745777478/KM5_bdkref.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745777469/KM2_enducu.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745777725/DSC04571_pv4ndd.jpg",
+
     ],
     features: [
-      "Modern and comfortable seating arrangements",
-      "Neutral color scheme for a cozy atmosphere",
-      "Soft ambient lighting to enhance relaxation",
-      "Minimalist coffee table with a touch of elegance"
+      "Space-saving furniture",
+      "Soft ambient lighting",
+      "Optimized layout for small area"
     ],
     materials: [
-      "Comfortable fabric upholstery",
-      "Wooden flooring for warmth",
-      "Modern lighting fixtures",
-      "Minimalist design elements"
+      "Laminate wood flooring",
+      "Matte wall paint",
+      "Custom built-in wardrobe"
     ],
     relatedProjects: [
       {
-        id: "esma-coffee-shop",
-        title: "Esma Coffee Shop",
-        image: "/commercial/coffee-shop/esma/placeholder.svg?height=300&width=400",
-        category: "commercial",
-        subcategory: "coffee-shop"
+        id: "mrs-kristy-project",
+        title: "Open Space Mrs. Kristy",
+        image: "/placeholder.jpg",
+        category: "residential",
+        subcategory: "family-room"
+      },
+      {
+        id: "mrs-farida-project",
+        title: "Living Room Mrs. Farida",
+        image: "/placeholder.jpg",
+        category: "residential",
+        subcategory: "living-room"
       },
       {
         id: "mrs-fira-project",
-        title: "Mrs. Fira's Kitchen & Dining Area",
+        title: "Family Room Mrs. Fira",
         image: "/placeholder.jpg",
         category: "residential",
-        subcategory: "kitchen-set"
-      },
-      {
-        id: "mrs-kristy-project",
-        title: "Mrs. Kristy's Living Room",
-        image: "/placeholder.jpg",
-        category: "residential",
-        subcategory: "living-room"
+        subcategory: "family-room"
       }
     ]
-  },
-  //Residential Projects Mrs. Febi
+  }
+  ,
+  //Residential Projects Mrs. Febi 
   {
     id: "mrs-febi-project",
-    title: "Living Room & Dining Area Mrs. Febi",
-    subtitle: "Spacious and Functional Living and Dining Area Design",
-    image: "/placeholder.jpg",
+    title: "Kids Bedroom Mrs. Febi",
+    subtitle: "Bright and Cheerful Kids Bedroom Design",
+    image: "https://res.cloudinary.com/del1pfnko/image/upload/v1745778940/C12_ogedaj.png",
     category: "residential",
-    subcategory: "living-room",
+    subcategory: "kids-bedroom",
     location: "Malang",
-    area: "72.8 m²",
-    duration: "1.5 months",
+    area: "13.6 m²",
+    duration: "1.5 Months",
     completed: "2023",
     client: "Mrs. Febi",
     description: [
-      "The design for the living and dining area combines spaciousness with functionality, perfect for family gatherings and hosting guests.",
-      "The open layout allows for smooth flow between the living and dining areas, with large windows providing ample natural light.",
-      "Modern furniture and light tones were used to create a welcoming and airy atmosphere, ideal for both casual and formal events."
+      "A fun and colorful kids bedroom designed for creativity and comfort.",
+      "Balanced space for play, rest, and study activities.",
+      "Soft furnishings and lively accents to stimulate imagination."
     ],
-    designImage: "/placeholder.jpg",
+    designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745778859/C10_oeamvl.png",
     realityImage: "/placeholder.jpg",
     gallery: [
-      "/placeholder.jpg",
-      "/placeholder.jpg"
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745778944/C20_pmwtjn.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745778859/C10_oeamvl.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745778978/C24_jck0gj.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745779006/C34_pspvnf.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745779010/C38_iqgu4j.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745779013/C39_o9qci9.png",
     ],
     features: [
-      "Open-plan living and dining layout for spaciousness",
-      "Large windows for ample natural light",
-      "Neutral color scheme for a bright and airy feel",
-      "Modern furniture with a blend of comfort and style"
+      "Child-safe furniture",
+      "Creative storage solutions",
+      "Playful wall accents"
     ],
     materials: [
-      "Wooden flooring for warmth and texture",
-      "Neutral-toned upholstery for furniture",
-      "Minimalist modern lighting fixtures",
-      "Large glass windows for natural light"
+      "Vinyl flooring",
+      "Non-toxic wall paint",
+      "Custom cabinetry"
     ],
     relatedProjects: [
       {
-        id: "esma-coffee-shop",
-        title: "Esma Coffee Shop",
-        image: "/commercial/coffee-shop/esma/placeholder.svg?height=300&width=400",
-        category: "commercial",
-        subcategory: "coffee-shop"
-      },
-      {
-        id: "mrs-ocha-project",
-        title: "Mrs. Ocha's Living Room",
+        id: "mrs-cindy-project",
+        title: "Kids Bedroom Mrs. Cindy",
         image: "/placeholder.jpg",
         category: "residential",
-        subcategory: "living-room"
+        subcategory: "kids-bedroom"
       },
       {
-        id: "mrs-kristy-project",
-        title: "Mrs. Kristy's Living Room",
+        id: "mrs-trixie-project",
+        title: "Kids Bedroom Mrs. Trixie",
         image: "/placeholder.jpg",
         category: "residential",
-        subcategory: "living-room"
+        subcategory: "kids-bedroom"
+      },
+      {
+        id: "mrs-mila-project",
+        title: "Kids Bedroom Mrs. Mila",
+        image: "/placeholder.jpg",
+        category: "residential",
+        subcategory: "kids-bedroom"
       }
     ]
   },  
@@ -983,7 +1025,7 @@ export const projects: Project[] = [
     id: "mrs-bunga-project",
     title: "Children's Room Mrs. Bunga",
     subtitle: "Playful and Cozy Children's Room Design",
-    image: "/placeholder.jpg",
+    image: "https://res.cloudinary.com/del1pfnko/image/upload/v1745779819/E8_sczamh.png",
     category: "residential",
     subcategory: "kids-bedroom", // Based on the area chosen
     location: "Pasuruan, Bangil",
@@ -996,11 +1038,14 @@ export const projects: Project[] = [
       "Bright colors, fun furniture, and playful accents were chosen to stimulate creativity and imagination.",
       "The room also features practical storage solutions to keep toys and belongings organized, maximizing the small space."
     ],
-    designImage: "/placeholder.jpg",
+    designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745779864/E2_ynklwh.png",
     realityImage: "/placeholder.jpg",
     gallery: [
-      "/placeholder.jpg",
-      "/placeholder.jpg"
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745779777/E1_jm5iwo.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745779781/E13_bz8x1r.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745779809/E9_iwxeip.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745779881/E14_dtyyww.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745779864/E2_ynklwh.png",
     ],
     features: [
       "Bright color scheme with playful accents",
@@ -1041,69 +1086,66 @@ export const projects: Project[] = [
   //Residential Projects Mrs. Pipid
   {
     id: "mrs-pipid-project",
-    title: "Family Room Mrs. Pipid",
-    subtitle: "Functional and Cozy Family Room Design",
-    image: "/placeholder.jpg",
+    title: "Kitchen Mrs. Pipid",
+    subtitle: "Modern and Functional Kitchen Design",
+    image: "https://res.cloudinary.com/del1pfnko/image/upload/v1745780237/C8_oxry0t.png",
     category: "residential",
-    subcategory: "family-room",
+    subcategory: "kitchen-set",
     location: "Pekalongan",
-    area: "18 m²",
-    duration: "1 month",
+    area: "10 m²",
+    duration: "1 Month",
     completed: "2024",
     client: "Mrs. Pipid",
     description: [
-      "The family room was designed as a versatile space for relaxation and entertainment.",
-      "Soft lighting and comfortable furniture pieces were selected to create a warm and inviting atmosphere.",
-      "A combination of neutral tones and accent colors gives the room a balanced look while maintaining functionality."
+      "A modern kitchen design focused on functionality and sleek aesthetics.",
+      "Maximized storage and efficient layout for daily cooking activities.",
+      "Bright and airy ambiance with clean finishes."
     ],
-    designImage: "/placeholder.jpg",
+    designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745780243/C13_orw4y7.png",
     realityImage: "/placeholder.jpg",
     gallery: [
-      "/placeholder.jpg",
-      "/placeholder.jpg"
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745780265/C5_cxtfly.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745780281/C7_ixbm2c.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745780281/C10_mcraiy.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745780292/C12_bl0gnb.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745780309/C16_raj9dx.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745780329/C21_l106tr.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745780318/C18_nbfdki.png",
     ],
     features: [
-      "Spacious layout with multifunctional seating",
-      "Warm and cozy lighting design",
-      "Accent wall with neutral tones and artistic touches",
-      "Large windows for natural light"
+      "Built-in cabinetry",
+      "Quartz countertop",
+      "Efficient lighting"
     ],
     materials: [
-      "Soft fabric upholstery for seating",
-      "Wooden flooring for warmth",
-      "Decorative lighting fixtures",
-      "Accent cushions and throws for comfort"
+      "HPL finish",
+      "Quartz surface",
+      "Tempered glass backsplash"
     ],
     relatedProjects: [
       {
-        id: "esma-coffee-shop",
-        title: "Esma Coffee Shop",
-        image: "/commercial/coffee-shop/esma/placeholder.svg?height=300&width=400",
-        category: "commercial",
-        subcategory: "coffee-shop"
-      },
-      {
-        id: "mrs-ocha-project",
-        title: "Mrs. Ocha's Living Room",
+        id: "mrs-agnes-project",
+        title: "Kitchen Mrs. Agnes",
         image: "/placeholder.jpg",
         category: "residential",
-        subcategory: "living-room"
+        subcategory: "kitchen-set"
       },
       {
-        id: "mrs-febi-project",
-        title: "Living Room & Dining Area Mrs. Febi",
+        id: "mrs-acun-project",
+        title: "Kitchen Mrs. Acun",
         image: "/placeholder.jpg",
         category: "residential",
-        subcategory: "living-room"
+        subcategory: "kitchen-set"
       }
     ]
-  },
+  }
+  ,
   //Residential Projects Mrs. Mila
   {
     id: "mrs-mila-project",
     title: "Kids' Room Mrs. Mila",
     subtitle: "Bright and Playful Kids' Room Design",
-    image: "/placeholder.jpg",
+    image: "https://res.cloudinary.com/del1pfnko/image/upload/v1745780603/E4_u7vcct.png",
     category: "residential",
     subcategory: "kids-bedroom", // Based on the area chosen
     location: "Pekalongan",
@@ -1116,11 +1158,16 @@ export const projects: Project[] = [
       "Bright colors and whimsical elements are incorporated to encourage creativity and imagination.",
       "Custom furniture was designed to ensure both functionality and comfort, with ample storage space."
     ],
-    designImage: "/placeholder.jpg",
+    designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745780598/E2_oapbvb.png",
     realityImage: "/placeholder.jpg",
     gallery: [
-      "/placeholder.jpg",
-      "/placeholder.jpg"
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745780598/E2_oapbvb.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745780603/E4_u7vcct.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745780606/E7_ngtu4x.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745780729/E10_o7n7lz.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745780729/E10_o7n7lz.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745780754/E5_tk3sic.png",
+      
     ],
     features: [
       "Bright and playful color scheme",

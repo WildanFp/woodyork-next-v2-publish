@@ -55,7 +55,7 @@ export default async function ProjectDetailPage({
           href="/"
           className="text-2xl md:text-3xl font-light tracking-wider"
         >
-          woodwork
+          woodyork
         </Link>
         <nav className="hidden md:flex space-x-10 text-base">
           <Link
@@ -393,7 +393,7 @@ export default async function ProjectDetailPage({
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
           <AnimatedSection animation="fade-in">
             <h3 className="uppercase text-lg md:text-xl mb-6 tracking-wider">
-              WOODWORK.
+              woodyork.
             </h3>
             <p className="text-base text-gray-400 mb-3">
               We're welcoming you always.
@@ -499,7 +499,7 @@ export default async function ProjectDetailPage({
 
         <div className="text-center text-base text-gray-600">
           <AnimatedSection animation="fade-in" delay={400}>
-            ©2023 Woodwork. All rights reserved - Produced by Volstabs
+            ©2025 woodyork. All rights reserved - Produced by voxlabs
           </AnimatedSection>
         </div>
       </footer>
