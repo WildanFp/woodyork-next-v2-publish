@@ -106,7 +106,10 @@ export default function Home() {
           <AnimatedSection animation="fade-in">
             <div className="overflow-hidden rounded-sm">
               <video width="780" height="480" controls>
-                <source src="/CP.mp4" type="video/mp4" />
+                <source
+                  src="https://res.cloudinary.com/dec19xsoi/video/upload/v1745782420/CPC_wcel9f.mp4"
+                  type="video/mp4"
+                />
                 Browser kamu tidak mendukung format video ini.
               </video>
             </div>

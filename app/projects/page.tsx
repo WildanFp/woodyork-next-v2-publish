@@ -274,7 +274,7 @@ export default async function ProjectsPage({
 
         <div className="text-center text-base text-gray-600">
           <AnimatedSection animation="fade-in" delay={400}>
-            ©2023 woodyork. All rights reserved - Produced by Volstabs
+            ©2025 woodyork. All rights reserved - Produced by voxlabs
           </AnimatedSection>
         </div>
       </footer>

@@ -13,7 +13,7 @@ export default function ServicesPage() {
       {/* Navigation */}
       <header className="p-6 md:p-8 lg:p-10 flex justify-between items-center">
         <Link href="/" className="text-2xl md:text-3xl font-light tracking-wider">
-          woodwork
+          woodyork
         </Link>
         <nav className="hidden md:flex space-x-10 text-base">
           <Link href="/about" className="text-gray-400 hover:text-white transition-colors duration-300">
@@ -119,7 +119,7 @@ export default function ServicesPage() {
       <footer className="py-20 px-4 md:px-8 lg:px-16 border-t border-zinc-900">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
           <AnimatedSection animation="fade-in">
-            <h3 className="uppercase text-lg md:text-xl mb-6 tracking-wider">WOODWORK.</h3>
+            <h3 className="uppercase text-lg md:text-xl mb-6 tracking-wider">woodyork.</h3>
             <p className="text-base text-gray-400 mb-3">We're welcoming you always.</p>
           </AnimatedSection>
 
@@ -192,7 +192,7 @@ export default function ServicesPage() {
 
         <div className="text-center text-base text-gray-600">
           <AnimatedSection animation="fade-in" delay={400}>
-            ©2023 Woodwork. All rights reserved - Produced by Volstabs
+            ©2025 woodyork. All rights reserved - Produced by voxlabs
           </AnimatedSection>
         </div>
       </footer>
