@@ -23,7 +23,7 @@ export default function Home() {
       <section
         className="relative h-screen flex flex-col bg-cover bg-center"
         style={{
-          backgroundImage: "url('DSC01402.jpg')",
+          backgroundImage: "url('DSC01402.JPG')",
         }}
       >
         <header className="p-6 flex justify-between items-center bg-black bg-opacity-90">
