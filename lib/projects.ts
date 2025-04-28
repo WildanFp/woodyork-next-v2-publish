@@ -836,7 +836,7 @@ export const projects: Project[] = [
     id: "mrs-lamia-project",
     title: "Karyawan & Seating Area Mrs. Lamia",
     subtitle: "Efficient and Collaborative Karyawan & Seating Area Design",
-    image: "/placeholder.jpg",
+    image: "https://res.cloudinary.com/del1pfnko/image/upload/v1745809192/F2_vagrx9.png",
     category: "commercial",
     subcategory: "office",
     location: "Malang, Pakis",
@@ -849,11 +849,16 @@ export const projects: Project[] = [
       "The layout incorporates ergonomic seating and flexible workstations, with a modern aesthetic that promotes creativity and comfort.",
       "Lighting and materials were chosen to enhance the productivity of the space, ensuring that each corner offers both function and style."
     ],
-    designImage: "/placeholder.jpg",
-    realityImage: "/placeholder.jpg",
+    designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745809186/F3_brxjr6.png",
+    realityImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745809388/DSC01443_pedzvq.jpg",
     gallery: [
-      "/placeholder.jpg",
-      "/placeholder.jpg"
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745809201/F4_tbuqnn.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745809198/E15_tnvay7.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745809192/F2_vagrx9.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745809186/F3_brxjr6.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745809388/DSC01443_pedzvq.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745809179/E13_n5kjfz.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745809175/F6_ku1qko.png",
     ],
     features: [
       "Flexible seating arrangements with ergonomic chairs",
@@ -1208,69 +1213,65 @@ export const projects: Project[] = [
   //Residential Projects Mrs. Aghnia
   {
     id: "mrs-aghnia-project",
-    title: "Family Room Mrs. Aghnia",
-    subtitle: "Spacious and Comfortable Family Room Design",
-    image: "/placeholder.jpg",
+    title: "Living Room Mrs. Aghnia",
+    subtitle: "Cozy and Elegant Living Room Design",
+    image: "https://res.cloudinary.com/del1pfnko/image/upload/v1745858308/C4_wtxf2r.png",
     category: "residential",
-    subcategory: "family-room", // Based on the area chosen
+    subcategory: "living-room",
     location: "Malang",
-    area: "35.4 m²", // Area Family Room
-    duration: "2 months",
+    area: "17.7 m²",
+    duration: "2 Months",
     completed: "2022",
     client: "Mrs. Aghnia",
     description: [
-      "The family room was designed to be spacious and comfortable, a perfect place for relaxation and gatherings.",
-      "Soft seating arrangements and functional storage options were incorporated to ensure comfort and convenience.",
-      "Natural light was maximized through large windows, while warm lighting accents create a cozy ambiance in the evenings."
+      "A cozy and elegant living room designed for comfort and stylish gatherings.",
+      "Combining modern furnishings with a warm color palette to create a welcoming atmosphere.",
+      "Optimized space for both relaxation and entertainment."
     ],
-    designImage: "/placeholder.jpg",
+    designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745858310/C8_jmoiyy.png",
     realityImage: "/placeholder.jpg",
     gallery: [
-      "/placeholder.jpg",
-      "/placeholder.jpg"
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745858327/C10_olcsgo.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745858319/C9_z09lsc.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745858310/C8_jmoiyy.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745858308/C4_wtxf2r.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745858302/C5_cxrzi2.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745858280/C3_o4jhff.png",
     ],
     features: [
-      "Large seating area for family gatherings",
-      "Ample natural lighting from large windows",
-      "Functional storage solutions for books and decor",
-      "Cozy lighting elements for evening ambiance"
+      "Custom-built sofa",
+      "Ambient lighting",
+      "Textured wall finishes"
     ],
     materials: [
-      "Soft fabric upholstery for seating",
-      "Wooden shelves for storage",
-      "Durable flooring with a cozy rug",
-      "Warm lighting fixtures for a comfortable atmosphere"
+      "Fabric upholstery",
+      "Matte paint finish",
+      "Parquet flooring"
     ],
     relatedProjects: [
       {
-        id: "esma-coffee-shop",
-        title: "Esma Coffee Shop",
-        image: "/commercial/coffee-shop/esma/placeholder.svg?height=300&width=400",
-        category: "commercial",
-        subcategory: "coffee-shop"
-      },
-      {
-        id: "mrs-febi-project",
-        title: "Living Room & Dining Area Mrs. Febi",
+        id: "mrs-fira-project",
+        title: "Living Room Mrs. Fira",
         image: "/placeholder.jpg",
         category: "residential",
         subcategory: "living-room"
       },
       {
-        id: "mrs-mila-project",
-        title: "Kids' Room Mrs. Mila",
+        id: "mrs-shabrina-project",
+        title: "Living Room Mrs. Shabrina",
         image: "/placeholder.jpg",
         category: "residential",
-        subcategory: "kids-bedroom"
+        subcategory: "living-room"
       }
     ]
-  },
+  }
+  ,
   //Residential Projects mrs farhana
   {
     id: "mrs-farhana-project",
     title: "Family Room & Coffee Corner Mrs. Farhana",
     subtitle: "Comfortable and Elegant Family Room & Coffee Corner Design",
-    image: "/placeholder.jpg",
+    image: "https://res.cloudinary.com/del1pfnko/image/upload/v1745859873/B2_brklye.png",
     category: "residential", 
     subcategory: "family-room", 
     location: "Madura, Bangkalan",
@@ -1283,7 +1284,7 @@ export const projects: Project[] = [
       "The design features a combination of modern and traditional elements, providing a warm atmosphere for everyday use.",
       "Custom furniture pieces and ambient lighting were incorporated to enhance the space's inviting feel."
     ],
-    designImage: "/placeholder.jpg",
+    designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745859969/B7_kxoprw.png",
     realityImage: "/placeholder.jpg",
     gallery: [
       "/placeholder.jpg",
