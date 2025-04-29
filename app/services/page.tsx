@@ -78,37 +78,43 @@ export default function ServicesPage() {
           {[
             {
               title: "Design Of Houses",
-              image: "/placeholder.svg?height=300&width=400",
+              image:
+                "https://res.cloudinary.com/dec19xsoi/image/upload/v1745885663/mrs._nita_1_alt_2_emx4yl.jpg?height=300&width=400",
               description:
                 "Transform your space with our comprehensive interior design services. We create harmonious environments that reflect your personality and lifestyle.",
             },
             {
               title: "Interior Design",
-              image: "/placeholder.svg?height=300&width=400",
+              image:
+                "https://res.cloudinary.com/dec19xsoi/image/upload/v1745883926/b4_wsvy8m.png?height=300&width=400",
               description:
                 "Transform your space with our comprehensive interior design services. We create harmonious environments that reflect your personality and lifestyle.",
             },
             {
               title: "Exterior Design",
-              image: "/placeholder.svg?height=300&width=400",
+              image:
+                "https://res.cloudinary.com/dec19xsoi/image/upload/v1745771013/G_dea5di.png?height=300&width=400",
               description:
                 "Transform your space with our comprehensive interior design services. We create harmonious environments that reflect your personality and lifestyle.",
             },
             {
               title: "Custom Furniture",
-              image: "/placeholder.svg?height=300&width=400",
+              image:
+                "https://res.cloudinary.com/dec19xsoi/image/upload/v1745770474/F2_qbezpq.png?height=300&width=400",
               description:
                 "Transform your space with our comprehensive interior design services. We create harmonious environments that reflect your personality and lifestyle.",
             },
             {
               title: "Design Of Public Objects",
-              image: "/placeholder.svg?height=300&width=400",
+              image:
+                "https://res.cloudinary.com/dec19xsoi/image/upload/v1745771560/F11_dlmqfy.png?height=300&width=400",
               description:
                 "Transform your space with our comprehensive interior design services. We create harmonious environments that reflect your personality and lifestyle.",
             },
             {
               title: "Construction",
-              image: "/placeholder.svg?height=300&width=400",
+              image:
+                "https://res.cloudinary.com/dec19xsoi/image/upload/v1745771459/J9_e0ctut.png?height=300&width=400",
               description:
                 "Transform your space with our comprehensive interior design services. We create harmonious environments that reflect your personality and lifestyle.",
             },

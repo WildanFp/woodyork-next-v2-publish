@@ -12,7 +12,8 @@ const workflowSteps = [
       "Pada tahap pertama interior design, kami akan mendengarkan kebutuhan client dan menuangkannya ke dalam konsep design serta layout. tidak cuman itu, lalu diperlukan juga survey lapangan untuk pengukuran, supaya memiliki gambaran ruang yang jelas dalam mendesign.",
       "Di tahap ini kami akan mengajukan banyak pertanyaan sesuai ekspektasi klien dan memberikan contoh design untuk memberikan gambaran klien supaya tergambarkan contoh design yang sesuai dengan minat klien.",
     ],
-    image: "/placeholder.svg?height=400&width=600",
+    image:
+      "https://res.cloudinary.com/dec19xsoi/image/upload/v1745898490/DSC01486_cvq12x.jpg?height=400&width=600",
   },
   {
     id: 2,
@@ -21,7 +22,8 @@ const workflowSteps = [
       "Pada tahap kedua, kami akan membuat konsep desain berdasarkan kebutuhan dan preferensi yang telah diidentifikasi pada tahap konsultasi.",
       "Tim desainer kami akan mengembangkan sketsa awal, mood board, dan visualisasi 3D untuk memberikan gambaran yang jelas tentang proyek. Kami akan melakukan revisi sesuai dengan feedback Anda hingga desain final disetujui.",
     ],
-    image: "/placeholder.svg?height=400&width=600",
+    image:
+      "https://res.cloudinary.com/dec19xsoi/image/upload/v1745762879/16_ucexo5.png?height=400&width=600",
   },
   {
     id: 3,
@@ -30,7 +32,8 @@ const workflowSteps = [
       "Pada tahap ketiga, kami akan mengembangkan gambar kerja detail yang akan digunakan sebagai panduan konstruksi.",
       "Gambar kerja ini mencakup denah, potongan, detail konstruksi, spesifikasi material, dan informasi teknis lainnya yang diperlukan untuk implementasi yang tepat dari desain yang telah disetujui.",
     ],
-    image: "/placeholder.svg?height=400&width=600",
+    image:
+      "https://res.cloudinary.com/dec19xsoi/image/upload/v1745899279/COMPANY_PROFILE_WOODYORK_2024_page-0014_gwbael.jpg?height=400&width=600",
   },
   {
     id: 4,
@@ -39,7 +42,8 @@ const workflowSteps = [
       "Pada tahap keempat, kami akan menyusun Rencana Anggaran Biaya (RAB) yang komprehensif untuk proyek Anda.",
       "RAB ini mencakup biaya material, tenaga kerja, dan biaya lainnya yang terkait dengan implementasi desain. Kami akan memastikan transparansi penuh dalam penganggaran dan membantu Anda memahami setiap komponen biaya.",
     ],
-    image: "/placeholder.svg?height=400&width=600",
+    image:
+      "https://res.cloudinary.com/dec19xsoi/image/upload/v1745898871/closeup-shot-entrepreneur-working-from-home-his-personal-finances-savings_rwtmkj.jpg?height=400&width=600",
   },
   {
     id: 5,
@@ -48,7 +52,8 @@ const workflowSteps = [
       "Pada tahap kelima, kami akan melaksanakan konstruksi dan instalasi sesuai dengan desain dan spesifikasi yang telah disetujui.",
       "Tim konstruksi kami yang berpengalaman akan bekerja dengan teliti dan efisien untuk mewujudkan desain Anda. Kami akan melakukan pengawasan ketat untuk memastikan kualitas dan kesesuaian dengan desain original.",
     ],
-    image: "/placeholder.svg?height=400&width=600",
+    image:
+      "https://res.cloudinary.com/dec19xsoi/image/upload/v1745762852/RK5_nrzvkh.png?height=400&width=600",
   },
   {
     id: 6,
@@ -57,7 +62,8 @@ const workflowSteps = [
       "Pada tahap final, kami akan melakukan serah terima proyek yang telah selesai.",
       "Kami akan melakukan inspeksi akhir bersama Anda untuk memastikan semua aspek proyek telah sesuai dengan ekspektasi. Kami juga akan memberikan panduan perawatan dan dukungan pasca-proyek untuk memastikan kepuasan jangka panjang Anda.",
     ],
-    image: "/placeholder.svg?height=400&width=600",
+    image:
+      "https://res.cloudinary.com/dec19xsoi/image/upload/v1745898488/DSC01487_vrcptr.jpg?height=400&width=600",
   },
 ];
 
