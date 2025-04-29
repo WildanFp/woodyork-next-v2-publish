@@ -316,17 +316,13 @@ export default function AboutPage() {
               <MapPin className="w-8 h-8 mb-4 text-amber-300" />
               <h3 className="text-lg font-medium mb-2">Visit Our Studio</h3>
               <p className="text-sm text-gray-300">
-                Jalan Pemuda Raya
-                <br />
-                Kav. 15 Blok 23A, 203
-                <br />
-                Kelapa Gading, 14240
+                Perumahan Graha Pakis Permai, Blok C20, Malang, Jawa Timur
               </p>
             </div>
             <div className="bg-zinc-900 p-8 rounded-sm flex flex-col items-center text-center">
               <Phone className="w-8 h-8 mb-4 text-amber-300" />
               <h3 className="text-lg font-medium mb-2">Call Us</h3>
-              <p className="text-sm text-gray-300">+62 812 3456 7890</p>
+              <p className="text-sm text-gray-300"> +62 812 3095 2808</p>
               <p className="text-sm text-gray-300 mt-2">
                 Monday - Friday: 9am - 6pm
               </p>
@@ -334,7 +330,7 @@ export default function AboutPage() {
             <div className="bg-zinc-900 p-8 rounded-sm flex flex-col items-center text-center">
               <Mail className="w-8 h-8 mb-4 text-amber-300" />
               <h3 className="text-lg font-medium mb-2">Email Us</h3>
-              <p className="text-sm text-gray-300">woodyork@gmail.com</p>
+              <p className="text-sm text-gray-300">woodyork.id@gmail.com</p>
               <p className="text-sm text-gray-300 mt-2">
                 We'll respond within 24 hours
               </p>
@@ -447,7 +443,7 @@ export default function AboutPage() {
         </div>
 
         <div className="text-center text-xs text-gray-600">
-          ©2023 woodyork. All rights reserved - Produced by Volstabs
+          ©2025 woodyork. All rights reserved - Produced by Voxlabs
         </div>
       </footer>
     </main>

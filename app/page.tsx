@@ -259,7 +259,7 @@ export default function Home() {
               Design
             </div>
             <Image
-              src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745772911/c16_fn9xij.png"
+              src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745895173/E3_igcygf.png"
               width={500}
               height={300}
               alt="Project before"
@@ -275,7 +275,7 @@ export default function Home() {
               Reality
             </div>
             <Image
-              src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745772812/KRISTY-02493_temsk5.jpg"
+              src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745895298/E33_umaptr.png"
               width={500}
               height={300}
               alt="Project after"
@@ -302,7 +302,7 @@ export default function Home() {
               >
                 <div className="relative cursor-pointer">
                   <Image
-                    src="/placeholder.svg?height=200&width=400"
+                    src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745771486/F1_soorgo.png?height=200&width=400"
                     width={400}
                     height={200}
                     alt={project.title}
@@ -337,61 +337,34 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="section-padding">
-        <AnimatedSection animation="slide-in-left" className="mb-10">
-          <h2>
-            <span className="uppercase text-base md:text-lg tracking-widest">
-              Contact{" "}
-            </span>
-            <span className="uppercase text-base md:text-lg font-medium tracking-widest">
-              Us
-            </span>
-          </h2>
-        </AnimatedSection>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            {
-              icon: <MapPin className="w-8 h-8 mb-5" />,
-              title: "Visit Us",
-              content: (
-                <p className="text-base text-gray-400">
-                  Jalan Pemuda Raya
-                  <br />
-                  Kav. 15 Blok 23A, 203
-                  <br />
-                  Kelapa Gading, 14240
-                </p>
-              ),
-            },
-            {
-              icon: <Phone className="w-8 h-8 mb-5" />,
-              title: "Call Us",
-              content: (
-                <p className="text-base text-gray-400">+62 812 3456 7890</p>
-              ),
-            },
-            {
-              icon: <Instagram className="w-8 h-8 mb-5" />,
-              title: "Our Instagram",
-              content: <p className="text-base text-gray-400">@woodyork</p>,
-            },
-            {
-              icon: <Mail className="w-8 h-8 mb-5" />,
-              title: "Email Us",
-              content: (
-                <p className="text-base text-gray-400">woodyork@gmail.com</p>
-              ),
-            },
-          ].map((item, i) => (
-            <AnimatedSection key={i} animation="fade-in" delay={i * 150}>
-              <div className="card hover-lift card-hover">
-                {item.icon}
-                <h3 className="text-lg md:text-xl mb-3">{item.title}</h3>
-                {item.content}
-              </div>
-            </AnimatedSection>
-          ))}
+      <section className="py-16 px-4 md:px-8 lg:px-16 bg-zinc-950">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-light mb-12 text-center">Find Us</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-zinc-900 p-8 rounded-sm flex flex-col items-center text-center">
+              <MapPin className="w-8 h-8 mb-4 text-amber-300" />
+              <h3 className="text-lg font-medium mb-2">Visit Our Studio</h3>
+              <p className="text-sm text-gray-300">
+                Perumahan Graha Pakis Permai, Blok C20, Malang, Jawa Timur
+              </p>
+            </div>
+            <div className="bg-zinc-900 p-8 rounded-sm flex flex-col items-center text-center">
+              <Phone className="w-8 h-8 mb-4 text-amber-300" />
+              <h3 className="text-lg font-medium mb-2">Call Us</h3>
+              <p className="text-sm text-gray-300"> +62 812 3095 2808</p>
+              <p className="text-sm text-gray-300 mt-2">
+                Monday - Friday: 9am - 6pm
+              </p>
+            </div>
+            <div className="bg-zinc-900 p-8 rounded-sm flex flex-col items-center text-center">
+              <Mail className="w-8 h-8 mb-4 text-amber-300" />
+              <h3 className="text-lg font-medium mb-2">Email Us</h3>
+              <p className="text-sm text-gray-300">woodyork.id@gmail.com</p>
+              <p className="text-sm text-gray-300 mt-2">
+                We'll respond within 24 hours
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
