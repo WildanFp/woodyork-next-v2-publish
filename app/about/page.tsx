@@ -105,7 +105,7 @@ export default function AboutPage() {
       <section className="relative h-[50vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/DSC01402.jpg?height=800&width=1600"
+            src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745780247/DSC01402_f4lehw.jpg?height=800&width=1600"
             alt="Interior design studio"
             fill
             className="object-cover brightness-50"
