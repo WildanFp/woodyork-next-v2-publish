@@ -28,7 +28,7 @@ export function WhatsAppButton() {
 
   const handleWhatsAppClick = () => {
     // Phone number and pre-filled message
-    const phoneNumber = "6281228499965"; // Replace with actual number (no + or spaces)
+    const phoneNumber = "6281230952808"; // Replace with actual number (no + or spaces)
     const message = "Hello, I'm interested in your design services. Can you provide more information?"
 
     // Create WhatsApp URL
