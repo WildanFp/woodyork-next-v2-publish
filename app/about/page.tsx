@@ -91,12 +91,7 @@ export default function AboutPage() {
           >
             services
           </Link>
-          <Link
-            href="/contact"
-            className="text-gray-400 hover:text-white transition"
-          >
-            contact
-          </Link>
+          
         </nav>
         <div className="md:hidden text-xs">menu</div>
       </header>
@@ -299,7 +294,7 @@ export default function AboutPage() {
             Let's create something exceptional together.
           </p>
           <Link
-            href="/contact"
+            href="/"
             className="border border-amber-300 text-amber-300 text-sm px-8 py-3 hover:bg-amber-300 hover:text-black transition"
           >
             Get in Touch

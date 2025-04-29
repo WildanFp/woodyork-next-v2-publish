@@ -76,12 +76,7 @@ export default async function ProjectDetailPage({
           >
             services
           </Link>
-          <Link
-            href="/contact"
-            className="text-gray-400 hover:text-white transition-colors duration-300"
-          >
-            contact
-          </Link>
+          
         </nav>
       </header>
 
@@ -379,7 +374,7 @@ export default async function ProjectDetailPage({
             your vision.
           </p>
           <Link
-            href="/contact"
+            href="/"
             className="inline-block border-2 border-amber-300 text-amber-300 text-base md:text-lg px-8 py-3 hover:bg-amber-300 hover:text-black transition-colors"
           >
             Get in Touch

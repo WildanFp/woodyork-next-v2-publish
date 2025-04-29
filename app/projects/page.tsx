@@ -70,12 +70,6 @@ export default async function ProjectsPage({
           >
             services
           </Link>
-          <Link
-            href="/contact"
-            className="text-gray-400 hover:text-white transition"
-          >
-            contact
-          </Link>
         </nav>
         <div className="md:hidden text-xs">menu</div>
       </header>
