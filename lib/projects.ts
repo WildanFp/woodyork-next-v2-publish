@@ -70,8 +70,8 @@ export const projects: Project[] = [
       "The design incorporates exposed brick walls, polished concrete floors, and wooden elements to create a textural richness that appeals to the senses. Custom-designed furniture pieces were created specifically for the space, including the central communal table and the bar area, which serves as the focal point of the shop.",
       "Lighting was carefully considered to create different moods throughout the day, with pendant lights providing focused illumination over seating areas and the bar, while ambient lighting creates a warm glow throughout the space in the evening hours.",
     ],
-    designImage: "/commercial/coffee-shop/esma/placeholder.svg?height=400&width=600",
-    realityImage: "/commercial/coffee-shop/esma/placeholder.svg?height=400&width=600",
+    designImage: "https://res.cloudinary.com/dec19xsoi/image/upload/v1745767874/888_tmz4er.png?height=400&width=600",
+    realityImage: "https://res.cloudinary.com/dec19xsoi/image/upload/v1745767868/h_enlmoq.png?height=400&width=600",
     gallery: [
       "https://res.cloudinary.com/dec19xsoi/image/upload/v1745767874/888_tmz4er.png",
       "https://res.cloudinary.com/dec19xsoi/image/upload/v1745767871/b_praqy8.png",

@@ -48,7 +48,7 @@ export default function ServicesPage() {
       <section className="relative h-[70vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/services.jpg?height=800&width=1600"
+            src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745898488/DSC01487_vrcptr.jpg?height=800&width=1600"
             alt="Interior design showcase"
             fill
             className="object-cover brightness-50"

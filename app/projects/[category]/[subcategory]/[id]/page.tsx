@@ -89,11 +89,10 @@ export default async function ProjectDetailPage({
       <section className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=800&width=1600"
+            src={project.image || "/placeholder.svg"}
             alt={project.title}
             fill
-            className="object-cover brightness-50"
-            priority
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
           />
         </div>
         <AnimatedSection
