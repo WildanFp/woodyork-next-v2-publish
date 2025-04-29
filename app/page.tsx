@@ -50,7 +50,6 @@ export default function Home() {
             >
               services
             </Link>
-           
           </nav>
           <div className="md:hidden text-xs">menu</div>
         </header>
@@ -281,9 +280,24 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {[
-            { title: "Modern Luxury", subtitle: "Interior Design" },
-            { title: "Modern Minimalist", subtitle: "Interior Design" },
-            { title: "Japanese Minimalist", subtitle: "Interior Design" },
+            {
+              title: "Modern Luxury",
+              subtitle: "Store Design",
+              image:
+                "https://res.cloudinary.com/dec19xsoi/image/upload/v1745771486/F1_soorgo.png?height=200&width=400",
+            },
+            {
+              title: "Modern Minimalist",
+              subtitle: "Interior Design",
+              image:
+                "https://res.cloudinary.com/dec19xsoi/image/upload/v1745772490/C24_qd9rq5.png?height=200&width=400",
+            },
+            {
+              title: "Japanese Minimalist",
+              subtitle: "Interior Design",
+              image:
+                "https://res.cloudinary.com/dec19xsoi/image/upload/v1745886493/B1_xjwric.png?height=200&width=400",
+            },
           ].map((project, i) => (
             <AnimatedSection key={i} animation="fade-in" delay={i * 200}>
               <HoverCard
@@ -297,7 +311,7 @@ export default function Home() {
               >
                 <div className="relative cursor-pointer">
                   <Image
-                    src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745771486/F1_soorgo.png?height=200&width=400"
+                    src={project.image || "/placeholder.svg"}
                     width={400}
                     height={200}
                     alt={project.title}
