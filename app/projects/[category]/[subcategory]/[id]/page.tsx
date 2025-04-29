@@ -50,34 +50,31 @@ export default async function ProjectDetailPage({
       <WhatsAppButton />
 
       {/* Navigation */}
-      <header className="p-6 md:p-8 lg:p-10 flex justify-between items-center">
-        <Link
-          href="/"
-          className="text-2xl md:text-3xl font-light tracking-wider"
-        >
+      <header className="p-6 flex justify-between items-center">
+        <Link href="/" className="text-xl font-light">
           woodyork
         </Link>
-        <nav className="hidden md:flex space-x-10 text-base">
+        <nav className="hidden md:flex space-x-6 text-sm">
           <Link
             href="/about"
-            className="text-gray-400 hover:text-white transition-colors duration-300"
+            className="text-amber-300 hover:text-amber-200 transition"
           >
             about
           </Link>
           <Link
             href="/projects"
-            className="text-amber-300 hover:text-amber-200 transition-colors duration-300"
+            className="text-gray-400 hover:text-white transition"
           >
             projects
           </Link>
           <Link
             href="/services"
-            className="text-gray-400 hover:text-white transition-colors duration-300"
+            className="text-gray-400 hover:text-white transition"
           >
             services
           </Link>
-          
         </nav>
+        <div className="md:hidden text-xs">menu</div>
       </header>
 
       {/* Hero Section */}
