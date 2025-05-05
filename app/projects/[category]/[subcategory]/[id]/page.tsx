@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { AnimatedSection } from "@/components/animated-section";
 import { getProjectById, getRelatedProjects } from "@/lib/projects";
+import { MediaGallery } from "@/components/media-gallery";
+import { FullscreenViewer } from "@/components/fullscreen-viewer";
 
 interface ProjectDetailPageProps {
   params: {
@@ -288,26 +290,56 @@ export default async function ProjectDetailPage({
           </h2>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {project.gallery.map((image, i) => (
-            <AnimatedSection
-              key={i}
-              animation="fade-in"
-              delay={i * 100}
-              className="hover-lift"
-            >
-              <div className="relative h-64 md:h-72 overflow-hidden rounded-sm">
-                <Image
-                  src={image || "/placeholder.svg"}
-                  alt={`Gallery image ${i + 1}`}
-                  fill
-                  className="object-cover transition-transform duration-500 hover:scale-105"
-                />
-              </div>
-            </AnimatedSection>
-          ))}
-        </div>
+        <MediaGallery media={project.gallery} />
       </section>
+
+      {/* Related Projects */}
+      {relatedProjects.length > 0 && (
+        <section className="py-16 px-4 md:px-8 lg:px-16">
+          <AnimatedSection animation="fade-in" className="mb-10">
+            <h2 className="text-3xl md:text-4xl font-light mb-8">
+              Related Projects
+            </h2>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {relatedProjects.map((relatedProject) => (
+              <AnimatedSection
+                key={relatedProject.id}
+                animation="fade-in"
+                className="hover-lift"
+              >
+                <div className="bg-zinc-950 overflow-hidden group h-full">
+                  <div className="relative h-64 overflow-hidden">
+                    <Image
+                      src={relatedProject.image || "/placeholder.svg"}
+                      alt={relatedProject.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute top-4 left-4 bg-black/70 text-xs md:text-sm px-3 py-1 rounded-sm">
+                      {relatedProject.subcategory
+                        .replace(/-/g, " ")
+                        .replace(/\b\w/g, (l) => l.toUpperCase())}
+                    </div>
+                  </div>
+                  <div className="p-6 md:p-8 flex flex-col items-center">
+                    <h3 className="text-xl md:text-2xl font-medium mb-4 text-center">
+                      {relatedProject.title}
+                    </h3>
+                    <Link
+                      href={`/projects/${relatedProject.category}/${relatedProject.subcategory}/${relatedProject.id}`}
+                      className="border border-white/30 text-sm md:text-base px-5 py-2 hover:bg-white/10 transition-colors"
+                    >
+                      View Detail
+                    </Link>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Related Projects */}
       {relatedProjects.length > 0 && (

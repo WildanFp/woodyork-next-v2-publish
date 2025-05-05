@@ -96,7 +96,7 @@ export function WorkflowSection() {
                 } flex items-center justify-center transition-all duration-300 hover:border-amber-200`}
               >
                 <span
-                  className={`text-2xl md:text-3xl ${
+                  className={`text-1xl md:text-3xl ${
                     activeStep === step.id ? "text-amber-300" : "text-white"
                   } transition-colors duration-300`}
                 >
@@ -104,7 +104,7 @@ export function WorkflowSection() {
                 </span>
                 <div className="absolute -bottom-10 text-center w-full">
                   <span
-                    className={`text-base md:text-lg ${
+                    className={`text-base md:text-ls ${
                       activeStep === step.id
                         ? "text-amber-300"
                         : "text-gray-400"
