@@ -9,8 +9,7 @@ const workflowSteps = [
     id: 1,
     title: "Konsultasi",
     description: [
-      "Pada tahap pertama interior design, kami akan mendengarkan kebutuhan client dan menuangkannya ke dalam konsep design serta layout. tidak cuman itu, lalu diperlukan juga survey lapangan untuk pengukuran, supaya memiliki gambaran ruang yang jelas dalam mendesign.",
-      "Di tahap ini kami akan mengajukan banyak pertanyaan sesuai ekspektasi klien dan memberikan contoh design untuk memberikan gambaran klien supaya tergambarkan contoh design yang sesuai dengan minat klien.",
+      "Di tahap awal ini, kami ingin mengenal cerita ruang yang ingin klien bangun. Kami akan menyesuaikan dengan gaya hidup, selera desain, hingga fungsi ruang yang klien butuhkan. Semua agar konsep yang kami rancang nanti benar-benar terasa personal dan sesuai ekspetasi klien. Proses ini biasanya dilengkapi juga dengan survei lokasi agar kami punya gambaran akurat soal dimensi dan karakter ruang.",
     ],
     image:
       "https://res.cloudinary.com/dec19xsoi/image/upload/v1745898490/DSC01486_cvq12x.jpg?height=400&width=600",
@@ -19,8 +18,7 @@ const workflowSteps = [
     id: 2,
     title: "Design",
     description: [
-      "Pada tahap kedua, kami akan membuat konsep desain berdasarkan kebutuhan dan preferensi yang telah diidentifikasi pada tahap konsultasi.",
-      "Tim desainer kami akan mengembangkan sketsa awal, mood board, dan visualisasi 3D untuk memberikan gambaran yang jelas tentang proyek. Kami akan melakukan revisi sesuai dengan feedback Anda hingga desain final disetujui.",
+      "Setelah informasi pada tahap awal sudah kami dapatkan, kami akan proses ke dalam konsep visual. Mulai dari moodboard, pemilihan warna, material, hingga tata letak ruang. Desain kami buat agar tidak hanya enak dipandang, tapi juga nyaman digunakan setiap hari. Estetika, fungsi, dan personalitas klien jadi satu kesatuan yang selaras.",
     ],
     image:
       "https://res.cloudinary.com/dec19xsoi/image/upload/v1745762879/16_ucexo5.png?height=400&width=600",
@@ -29,8 +27,7 @@ const workflowSteps = [
     id: 3,
     title: "Gambar Kerja",
     description: [
-      "Pada tahap ketiga, kami akan mengembangkan gambar kerja detail yang akan digunakan sebagai panduan konstruksi.",
-      "Gambar kerja ini mencakup denah, potongan, detail konstruksi, spesifikasi material, dan informasi teknis lainnya yang diperlukan untuk implementasi yang tepat dari desain yang telah disetujui.",
+      "Desain yang sudah disetujui akan kami olah jadi gambar teknis yang detail, dari denah, potongan, hingga visualisasi 3D. Gambar kerja ini jadi acuan penting saat tim konstruksi bekerja di lapangan, supaya hasil akhirnya sesuai ekspektasi dan tidak ada elemen yang terlewat.",
     ],
     image:
       "https://res.cloudinary.com/dec19xsoi/image/upload/v1745899279/COMPANY_PROFILE_WOODYORK_2024_page-0014_gwbael.jpg?height=400&width=600",
@@ -39,8 +36,7 @@ const workflowSteps = [
     id: 4,
     title: "RAB",
     description: [
-      "Pada tahap keempat, kami akan menyusun Rencana Anggaran Biaya (RAB) yang komprehensif untuk proyek Anda.",
-      "RAB ini mencakup biaya material, tenaga kerja, dan biaya lainnya yang terkait dengan implementasi desain. Kami akan memastikan transparansi penuh dalam penganggaran dan membantu Anda memahami setiap komponen biaya.",
+      "Sebelum pengerjaan dimulai, kami susun rencana anggaran secara transparan dan realistis. Semua biaya mulai dari jasa desain interior atau eksterior, bahan material, pembuatan furnitur custom, sampai pemasangan kami rinci jelas. Supaya klien bisa tenang dan leluasa menentukan pilihan yang paling cocok dengan perencanaan. ",
     ],
     image:
       "https://res.cloudinary.com/dec19xsoi/image/upload/v1745898871/closeup-shot-entrepreneur-working-from-home-his-personal-finances-savings_rwtmkj.jpg?height=400&width=600",
@@ -49,8 +45,7 @@ const workflowSteps = [
     id: 5,
     title: "Konstruksi & Instalasi",
     description: [
-      "Pada tahap kelima, kami akan melaksanakan konstruksi dan instalasi sesuai dengan desain dan spesifikasi yang telah disetujui.",
-      "Tim konstruksi kami yang berpengalaman akan bekerja dengan teliti dan efisien untuk mewujudkan desain Anda. Kami akan melakukan pengawasan ketat untuk memastikan kualitas dan kesesuaian dengan desain original.",
+      "Pada tahap ini, tim kami mulai membangun atau memproduksi hingga memasang tiap elemen sesuai gambar kerja. Proses ini kami jalankan dengan teliti, karena setiap detail akan membentuk suasana yang klien impikan. Mulai dari struktur dasar, finishing, hingga instalasi akhir. ",
     ],
     image:
       "https://res.cloudinary.com/dec19xsoi/image/upload/v1745762852/RK5_nrzvkh.png?height=400&width=600",
@@ -59,8 +54,7 @@ const workflowSteps = [
     id: 6,
     title: "Serah Terima",
     description: [
-      "Pada tahap final, kami akan melakukan serah terima proyek yang telah selesai.",
-      "Kami akan melakukan inspeksi akhir bersama Anda untuk memastikan semua aspek proyek telah sesuai dengan ekspektasi. Kami juga akan memberikan panduan perawatan dan dukungan pasca-proyek untuk memastikan kepuasan jangka panjang Anda.",
+      "Setelah semua tahapan selesai, kami akan melakukan final check untuk memastikan semuanya berjalan sesuai rencana. Ruang yang dulu hanya jadi gambaran, sekarang hadir nyata dan siap digunakan.",
     ],
     image:
       "https://res.cloudinary.com/dec19xsoi/image/upload/v1745898488/DSC01487_vrcptr.jpg?height=400&width=600",
@@ -75,11 +69,11 @@ export function WorkflowSection() {
       <div className="max-w-6xl mx-auto">
         <AnimatedSection animation="fade-in" className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-light mb-8">
-            <span className="font-light">Our </span>
-            <span className="font-medium">Workflow</span>
+            <span className="font-medium">Proses </span>
+            <span className="font-light">dan Alur Kerja</span>
           </h2>
           <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
-            berikut beberapa tahap yang akan team woody
+            berikut beberapa tahap yang akan team woodyork
             <br />
             lakukan untuk mewujudkan impian kamu.
           </p>

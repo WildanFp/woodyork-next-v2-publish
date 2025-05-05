@@ -1700,6 +1700,7 @@ export const projects: Project[] = [
       "https://res.cloudinary.com/dec19xsoi/image/upload/v1745888659/3E_xcsxm5.png",
       "https://res.cloudinary.com/dec19xsoi/image/upload/v1745888652/3F_bam75q.png",
       "https://res.cloudinary.com/dec19xsoi/image/upload/v1745888651/3B_opdvcf.png",
+      
     ],
     features: [
       "Space-efficient layout for small rooms",

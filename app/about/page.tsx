@@ -91,7 +91,6 @@ export default function AboutPage() {
           >
             services
           </Link>
-          
         </nav>
         <div className="md:hidden text-xs">menu</div>
       </header>
@@ -125,7 +124,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-2xl font-light mb-6">Our Story</h2>
               <div className="space-y-4">
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-about text-gray-300 leading-relaxed">
                   Woodyork berdiri dengan komitmen untuk menghadirkan solusi
                   desain interior yang terintegrasi menggabungkan kreativitas
                   perancangan ruang dengan keahlian dalam pembuatan furnitur
@@ -133,14 +132,14 @@ export default function AboutPage() {
                   tugas kami adalah menerjemahkan cerita tersebut menjadi desain
                   yang fungsional, estetis, dan sesuai dengan karakter klien.
                 </p>
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-about text-gray-300 leading-relaxed">
                   Didirikan di Malang, Woodyork memulai perjalanannya dari skala
                   lokal, dengan fokus pada detail, kualitas, dan pendekatan yang
                   personal. Seiring waktu, kami berkembang menjadi studio yang
                   dipercaya menangani berbagai proyek, mulai dari hunian pribadi
                   hingga ruang komersial, di berbagai kota.
                 </p>
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-about text-gray-300 leading-relaxed">
                   Keunggulan Woodyork terletak pada pendekatan desain yang
                   menyeluruh dimulai dari proses perencanaan ruang, visualisasi,
                   hingga pembuatan furnitur yang dirancang secara spesifik untuk
@@ -151,7 +150,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="relative h-80 md:h-96">
+            <div className="relative h-80 mt-20">
               <div className="overflow-hidden rounded-sm">
                 <video width="780" height="480" controls>
                   <source
@@ -169,50 +168,47 @@ export default function AboutPage() {
       {/* Philosophy & Values */}
       <section className="py-16 px-4 md:px-8 lg:px-16 bg-zinc-950">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-normal mb-1 text-center ">
+          {/* <h2 className="text-2xl font-normal mb-1 text-center ">
             “Karya yang Baik Dimulai dari Proses yang Dihargai”
+          </h2> */}
+          <h2 className="text-2xl font-normal mb-10 text-center ">
+            Kenapa Pilih Woodyork?
           </h2>
-          <h2 className="text-sm font-light mb-12 text-center">
+          {/* <h2 className="text-sm font-light mb-12 text-center">
             Motto ini mencerminkan filosofi kerja Woodyork: bahwa keindahan dan
             kualitas sebuah desain interior maupun furnitur tidak datang secara
             instan. Dibalik setiap karya yang memuaskan, ada proses panjang yang
             penuh pertimbangan, diskusi, revisi, dan perhatian terhadap detail.
-          </h2>
+          </h2> */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-zinc-900 p-8 rounded-sm">
               <div className="w-12 h-12 rounded-full border border-amber-300 flex items-center justify-center mb-6">
                 <span className="text-amber-300 text-xl">1</span>
               </div>
-              <h3 className="text-lg font-medium mb-4">
-                Menghargai proses = menghargai klien.
-              </h3>
+              <h3 className="text-lg font-medium mb-4">DESIGN</h3>
               <p className="text-sm text-gray-300 leading-relaxed">
-                Setiap proyek adalah perjalanan yang harus benar-benar mewakili
-                kebutuhan dan keinginan klien.
+                Kami merancang konsep interior serta ekterior yang mencerminkan
+                gaya hidup dan karakter klien.
               </p>
             </div>
             <div className="bg-zinc-900 p-8 rounded-sm">
               <div className="w-12 h-12 rounded-full border border-amber-300 flex items-center justify-center mb-6">
                 <span className="text-amber-300 text-xl">2</span>
               </div>
-              <h3 className="text-lg font-medium mb-4">
-                Detail menentukan segalanya.
-              </h3>
+              <h3 className="text-lg font-medium mb-4">BUILD</h3>
               <p className="text-sm text-gray-300 leading-relaxed">
-                Ukuran, material, tekstur, hingga pencahayaan semua diperhatikan
-                dengan seksama.
+                Kami membangun ruang yang nyaman, siap digunakan, dan sesuai
+                impian klien.
               </p>
             </div>
             <div className="bg-zinc-900 p-8 rounded-sm">
               <div className="w-12 h-12 rounded-full border border-amber-300 flex items-center justify-center mb-6">
                 <span className="text-amber-300 text-xl">3</span>
               </div>
-              <h3 className="text-lg font-medium mb-4">
-                Kualitas bukan kebetulan.
-              </h3>
+              <h3 className="text-lg font-medium mb-4">CUSTOM</h3>
               <p className="text-sm text-gray-300 leading-relaxed">
-                Hasil yang baik lahir dari proses yang matang, bukan dari
-                sesuatu yang instan.
+                Kami membuat furnitur khusus yang menyesuaikan ukuran, fungsi,
+                dan selera klien.
               </p>
             </div>
           </div>

@@ -55,16 +55,9 @@ export default function Home() {
         </header>
 
         <div className="flex-1 flex flex-col items-center justify-center relative">
-          {/* <AnimatedSection animation="scale-in">
-            <div className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full border-2 border-amber-300 flex items-center justify-center mb-10 shadow-[0_0_15px_rgba(217,119,6,0.3)]">
-              <span className="text-amber-300 text-7xl md:text-8xl font-serif">
-                W.
-              </span>
-            </div>
-          </AnimatedSection> */}
           <span>
             <BlurText
-              text="we're welcoming you always."
+              text="One Stop Solution for Your Dream Space."
               delay={200}
               animateBy="words"
               direction="top"
@@ -132,14 +125,17 @@ export default function Home() {
               <div className="flex gap-16 mt-6">
                 <div className="text-center">
                   <h3 className="text-5xl md:text-6xl font-light">
-                    <CountUp
-                      from={0}
-                      to={120}
-                      separator=","
-                      direction="up"
-                      duration={1}
-                      className="count-up-text"
-                    />
+                    <div className="flex gap text-center">
+                      <CountUp
+                        from={0}
+                        to={200}
+                        separator=","
+                        direction="up"
+                        duration={1}
+                        className="count-up-text"
+                      />
+                      <h3 className="mt-2">+</h3>
+                    </div>
                   </h3>
                   <p className="text-base md:text-lg text-gray-500">
                     projects finished
@@ -348,30 +344,30 @@ export default function Home() {
       {/* Contact Section */}
       <section className="py-16 px-4 md:px-8 lg:px-16 bg-zinc-950">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-light mb-12 text-center">Find Us</h2>
+          <h2 className="text-2xl font-light mb-12 text-center">Konsultasi Sekarang</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-zinc-900 p-8 rounded-sm flex flex-col items-center text-center">
               <MapPin className="w-8 h-8 mb-4 text-amber-300" />
-              <h3 className="text-lg font-medium mb-2">Visit Our Studio</h3>
+              <h3 className="text-lg font-medium mb-2">Lokasi Woodyork</h3>
               <p className="text-sm text-gray-300">
                 Perumahan Graha Pakis Permai, Blok C20, Malang, Jawa Timur
               </p>
             </div>
             <div className="bg-zinc-900 p-8 rounded-sm flex flex-col items-center text-center">
               <Phone className="w-8 h-8 mb-4 text-amber-300" />
-              <h3 className="text-lg font-medium mb-2">Call Us</h3>
+              <h3 className="text-lg font-medium mb-2">Telepon & Whatsapp</h3>
               <p className="text-sm text-gray-300"> +62 812 3095 2808</p>
-              <p className="text-sm text-gray-300 mt-2">
-                Monday - Friday: 9am - 6pm
-              </p>
+              {/* <p className="text-sm text-gray-300 mt-2">
+                Senin - Jumat: 9.00 - 18.00
+              </p> */}
             </div>
             <div className="bg-zinc-900 p-8 rounded-sm flex flex-col items-center text-center">
               <Mail className="w-8 h-8 mb-4 text-amber-300" />
-              <h3 className="text-lg font-medium mb-2">Email Us</h3>
+              <h3 className="text-lg font-medium mb-2">Hubungi Via Email</h3>
               <p className="text-sm text-gray-300">woodyork.id@gmail.com</p>
-              <p className="text-sm text-gray-300 mt-2">
+              {/* <p className="text-sm text-gray-300 mt-2">
                 We'll respond within 24 hours
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

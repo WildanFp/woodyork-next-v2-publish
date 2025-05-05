@@ -34,7 +34,6 @@ export default function ServicesPage() {
           >
             services
           </Link>
-          
         </nav>
         <div className="md:hidden text-xs">menu</div>
       </header>
@@ -55,14 +54,13 @@ export default function ServicesPage() {
           className="relative z-10 text-center px-4 max-w-4xl mx-auto"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6">
-            We <span className="font-normal">Create</span>
+            Ciptakan <span className="font-normal">Ruang</span>
             <br />
-            <span className="italic">Exceptional Spaces</span>
+            <span className="italic">Impianmu Sekarang</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-300">
-            Discover our comprehensive range of interior design services
-            <br />
-            tailored to your needs
+            Woodyork siap mewujudkan beragam kebutuhan ruang yang dirancang
+            khusus untukmu.
           </p>
         </AnimatedSection>
       </section>
@@ -72,46 +70,46 @@ export default function ServicesPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              title: "Design Of Houses",
+              title: "Desain Rumah",
               image:
                 "https://res.cloudinary.com/dec19xsoi/image/upload/v1745885663/mrs._nita_1_alt_2_emx4yl.jpg?height=300&width=400",
               description:
-                "Transform your space with our comprehensive interior design services. We create harmonious environments that reflect your personality and lifestyle.",
+                "Rancangan konsep rumah modern yang disesuaikan dengan desain menyesuaikan kebutuhan dan estetika.",
             },
             {
-              title: "Interior Design",
+              title: "Desain Interior",
               image:
                 "https://res.cloudinary.com/dec19xsoi/image/upload/v1745883926/b4_wsvy8m.png?height=300&width=400",
               description:
-                "Transform your space with our comprehensive interior design services. We create harmonious environments that reflect your personality and lifestyle.",
+                "Tata ruang interior rumah yang harmonis dan nyaman, mencerminan karakter serta kebutuhan klien.",
             },
             {
-              title: "Exterior Design",
+              title: "Desain Eksterior",
               image:
                 "https://res.cloudinary.com/dec19xsoi/image/upload/v1745771013/G_dea5di.png?height=300&width=400",
               description:
-                "Transform your space with our comprehensive interior design services. We create harmonious environments that reflect your personality and lifestyle.",
+                "Desain yang memperkuat tampilan eksterior properti secara menyeluruh.",
             },
             {
-              title: "Custom Furniture",
+              title: "Kustom Furnitur",
               image:
                 "https://res.cloudinary.com/dec19xsoi/image/upload/v1745770474/F2_qbezpq.png?height=300&width=400",
               description:
-                "Transform your space with our comprehensive interior design services. We create harmonious environments that reflect your personality and lifestyle.",
+                "Personalisasi perlengkapan atau perabotan rumah sesuai ukuran, fungsi, dan gaya ruang.",
             },
             {
-              title: "Design Of Public Objects",
+              title: "Desain Objek Publik",
               image:
                 "https://res.cloudinary.com/dec19xsoi/image/upload/v1745771560/F11_dlmqfy.png?height=300&width=400",
               description:
-                "Transform your space with our comprehensive interior design services. We create harmonious environments that reflect your personality and lifestyle.",
+                "Desain khusus ruang publik dan area komersial yang estetis, ramah pengguna, dan tahan lama.",
             },
             {
-              title: "Construction",
+              title: "Konstruksi & Manufaktur",
               image:
                 "https://res.cloudinary.com/dec19xsoi/image/upload/v1745771459/J9_e0ctut.png?height=300&width=400",
               description:
-                "Transform your space with our comprehensive interior design services. We create harmonious environments that reflect your personality and lifestyle.",
+                "Konstruksi interior dan eksterior profesional untuk hunian, kantor, hotel, hingga ruang usaha.",
             },
           ].map((service, i) => (
             <AnimatedSection

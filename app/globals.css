@@ -177,3 +177,7 @@
 .animate-scroll {
   animation: scroll 40s forwards linear infinite;
 }
+
+.text-about {
+  font-size: 0.70em;
+}
