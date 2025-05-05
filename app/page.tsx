@@ -84,7 +84,7 @@ export default function Home() {
       {/* About Us Section */}
       <section className="section-padding">
         <AnimatedSection animation="slide-in-left">
-          <h2 className="uppercase text-base md:text-lg mb-10 tracking-widest">
+          <h2 className="uppercase text-base md:text-lg mb-10 tracking-widest font-bold">
             About <span className="font-medium">Us</span>
           </h2>
         </AnimatedSection>
@@ -182,7 +182,7 @@ export default function Home() {
       <section className="section-padding">
         <AnimatedSection animation="fade-in" className="text-center mb-10">
           <h2>
-            <span className="uppercase text-base md:text-lg tracking-widest">
+            <span className="uppercase text-base md:text-lg tracking-widest font-bold">
               OUR{" "}
             </span>
             <span className="uppercase text-base md:text-lg font-light italic tracking-widest">
@@ -231,10 +231,10 @@ export default function Home() {
       <section className="section-padding">
         <AnimatedSection animation="fade-in" className="text-center mb-16">
           <h2>
-            <span className="uppercase text-base md:text-lg font-light italic tracking-widest">
+            <span className="uppercase text-base md:text-lg font-medium italic tracking-widest">
               FEATURED{" "}
             </span>
-            <span className="uppercase text-base md:text-lg tracking-widest">
+            <span className="uppercase text-base md:text-lg tracking-widest font-bold">
               PROJECT
             </span>
           </h2>
