@@ -13,8 +13,19 @@ import ShinyText from "./components/ShinyText/ShinyText";
 import CountUp from "./components/CountUp/CountUp";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import ImageComparison from "@/components/ui/compare";
+import { Header } from "@/components/header";
+import { MobileMenu } from "@/components/mobile-menu";
+import { usePathname } from "next/navigation";
+import { Menu } from "lucide-react";
 
 export default function Home() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (path: string) => {
+    return pathname === path;
+  };
+
   return (
     <main className="bg-black text-white min-h-screen">
       <WhatsAppButton />
@@ -51,7 +62,17 @@ export default function Home() {
               services
             </Link>
           </nav>
-          <div className="md:hidden text-xs">menu</div>
+          <button
+            className="md:hidden text-base flex items-center"
+            onClick={() => setIsMobileMenuOpen(true)}
+            aria-label="Open menu"
+          >
+            <Menu size={24} />
+          </button>
+          <MobileMenu
+            isOpen={isMobileMenuOpen}
+            onClose={() => setIsMobileMenuOpen(false)}
+          />
         </header>
 
         <div className="flex-1 flex flex-col items-center justify-center relative">
@@ -344,7 +365,9 @@ export default function Home() {
       {/* Contact Section */}
       <section className="py-16 px-4 md:px-8 lg:px-16 bg-zinc-950">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-light mb-12 text-center">Konsultasi Sekarang</h2>
+          <h2 className="text-2xl font-light mb-12 text-center">
+            Konsultasi Sekarang
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-zinc-900 p-8 rounded-sm flex flex-col items-center text-center">
               <MapPin className="w-8 h-8 mb-4 text-amber-300" />
