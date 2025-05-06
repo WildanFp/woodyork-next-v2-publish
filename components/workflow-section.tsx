@@ -43,7 +43,7 @@ const workflowSteps = [
   },
   {
     id: 5,
-    title: "Konstruksi & Instalasi",
+    title: "Instalasi",
     description: [
       "Pada tahap ini, tim kami mulai membangun atau memproduksi hingga memasang tiap elemen sesuai gambar kerja. Proses ini kami jalankan dengan teliti, karena setiap detail akan membentuk suasana yang klien impikan. Mulai dari struktur dasar, finishing, hingga instalasi akhir. ",
     ],
@@ -89,22 +89,18 @@ export function WorkflowSection() {
             >
               <button
                 onClick={() => setActiveStep(step.id)}
-                className={`relative w-20 h-20 md:w-24 md:h-24 rounded-full border-2 ${
-                  activeStep === step.id
-                    ? "border-amber-300"
-                    : "border-zinc-700"
-                } flex items-center justify-center transition-all duration-300 hover:border-amber-200`}
+                
               >
                 <span
-                  className={`text-1xl md:text-3xl ${
+                  className={`text-3xl md:text-4xl ${
                     activeStep === step.id ? "text-amber-300" : "text-white"
                   } transition-colors duration-300`}
                 >
                   {step.id}
                 </span>
-                <div className="absolute -bottom-10 text-center w-full">
+                <div className="mt-2">
                   <span
-                    className={`text-base md:text-ls ${
+                    className={`text-xs md:text-sm ${
                       activeStep === step.id
                         ? "text-amber-300"
                         : "text-gray-400"

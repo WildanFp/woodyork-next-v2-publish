@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -9,6 +11,7 @@ import {
   Twitter,
 } from "lucide-react";
 import { WhatsAppButton } from "@/components/whatsapp-button";
+import { AnimatedSection } from "@/components/animated-section";
 
 export default function AboutPage() {
   // const teamMembers = [
@@ -281,20 +284,27 @@ export default function AboutPage() {
       {/* Contact CTA */}
       <section className="py-16 px-4 md:px-8 lg:px-16">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-light mb-6">
+          <h2 className="text-3xl md:text-4xl font-light mb-6">
             Ready to Transform Your Space?
           </h2>
-          <p className="text-sm text-gray-300 mb-8 max-w-2xl mx-auto">
-            Whether you're looking to redesign a single room or undertake a
-            complete renovation, our team is ready to bring your vision to life.
-            Let's create something exceptional together.
+          <p className="text-lg md:text-xl text-gray-300 mb-10">
+            Contact us today to discuss your project and discover how our
+            services can bring your vision to life.
           </p>
-          <Link
-            href="/"
-            className="border border-amber-300 text-amber-300 text-sm px-8 py-3 hover:bg-amber-300 hover:text-black transition"
+          <button
+            onClick={() => {
+              const phoneNumber = "6281230952808"; // Replace with actual number (no + or spaces)
+              const message =
+                "Hello, I'm interested in your design services. Can you provide more information?";
+              const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                message
+              )}`;
+              window.open(whatsappUrl, "_blank");
+            }}
+            className="inline-block border-2 border-amber-300 text-amber-300 text-base md:text-lg px-8 py-3 hover:bg-amber-300 hover:text-black transition-colors"
           >
             Get in Touch
-          </Link>
+          </button>
         </div>
       </section>
 
