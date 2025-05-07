@@ -38,7 +38,8 @@ export default function Home() {
             "url('https://res.cloudinary.com/dec19xsoi/image/upload/v1745780247/DSC01402_f4lehw.jpg')",
         }}
       >
-        <header className="p-6 flex justify-between items-center bg-black bg-opacity-90">
+        <Header/>
+        {/* <header className="p-6 flex justify-between items-center bg-black bg-opacity-90">
           <Link href="/" className="text-xl font-light">
             woodyork
           </Link>
@@ -73,7 +74,7 @@ export default function Home() {
             isOpen={isMobileMenuOpen}
             onClose={() => setIsMobileMenuOpen(false)}
           />
-        </header>
+        </header> */}
 
         <div className="flex-1 flex flex-col items-center justify-center relative">
           <span>
@@ -82,7 +83,7 @@ export default function Home() {
               delay={200}
               animateBy="words"
               direction="top"
-              className="text-2xl md:text-5xl mb-8"
+              className="text-1xl md:text-5xl mb-8"
             />
           </span>
 
@@ -261,39 +262,39 @@ export default function Home() {
           </h2>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          <AnimatedSection
-            animation="slide-in-left"
-            className="relative overflow-hidden rounded-sm"
-          >
-            <div className="absolute top-6 left-6 bg-black/70 text-base px-3 py-1 z-10">
-              Design
-            </div>
-            <Image
-              src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745895173/E3_igcygf.png"
-              width={500}
-              height={300}
-              alt="Project before"
-              className="w-full h-auto transition-transform duration-700 hover:scale-105"
-            />
-          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <AnimatedSection
+              animation="slide-in-left"
+              className="relative overflow-hidden rounded-sm"
+            >
+              <div className="absolute top-6 left-6 bg-black/70 text-base px-3 py-1 z-10">
+                Design
+              </div>
+              <Image
+                src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745895173/E3_igcygf.png"
+                width={500}
+                height={300}
+                alt="Project before"
+                className="w-full h-auto transition-transform duration-700 hover:scale-105"
+              />
+            </AnimatedSection>
 
-          <AnimatedSection
-            animation="slide-in-right"
-            className="relative overflow-hidden rounded-sm"
-          >
-            <div className="absolute top-6 left-6 bg-black/70 text-base px-3 py-1 z-10">
-              Reality
-            </div>
-            <Image
-              src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745895298/E33_umaptr.png"
-              width={500}
-              height={300}
-              alt="Project after"
-              className="w-full h-auto transition-transform duration-700 hover:scale-105"
-            />
-          </AnimatedSection>
-        </div>
+            <AnimatedSection
+              animation="slide-in-right"
+              className="relative overflow-hidden rounded-sm"
+            >
+              <div className="absolute top-6 left-6 bg-black/70 text-base px-3 py-1 z-10">
+                Reality
+              </div>
+              <Image
+                src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745895298/E33_umaptr.png"
+                width={500}
+                height={300}
+                alt="Project after"
+                className="w-full h-auto transition-transform duration-700 hover:scale-105"
+              />
+            </AnimatedSection>
+          </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {[

@@ -9,6 +9,7 @@ import {
   getProjectsBySubcategory,
 } from "@/lib/projects";
 import type { ProjectCategory, ProjectSubcategory } from "@/lib/projects";
+import { Header } from "@/components/header";
 
 interface SearchParams {
   category?: string;
@@ -47,7 +48,8 @@ export default async function ProjectsPage({
       <WhatsAppButton />
 
       {/* Navigation */}
-      <header className="p-6 flex justify-between items-center">
+      <Header/>
+      {/* <header className="p-6 flex justify-between items-center">
         <Link href="/" className="text-xl font-light">
           woodyork
         </Link>
@@ -72,7 +74,7 @@ export default async function ProjectsPage({
           </Link>
         </nav>
         <div className="md:hidden text-xs">menu</div>
-      </header>
+      </header> */}
 
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center">

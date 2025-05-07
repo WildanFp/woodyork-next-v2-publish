@@ -12,58 +12,9 @@ import {
 } from "lucide-react";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { AnimatedSection } from "@/components/animated-section";
+import { Header } from "@/components/header";
 
 export default function AboutPage() {
-  // const teamMembers = [
-  //   {
-  //     id: 1,
-  //     name: "Alexander Wright",
-  //     position: "Founder & Principal Designer",
-  //     image: "/placeholder.svg?height=400&width=400",
-  //     bio: "Alexander brings over 15 years of experience in interior and architectural design. With a background in fine arts and architecture from the Royal College of Art, he founded woodyork with a vision to create spaces that blend functionality with artistic expression.",
-  //     social: {
-  //       instagram: "#",
-  //       linkedin: "#",
-  //       twitter: "#",
-  //     },
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "Sophia Chen",
-  //     position: "Senior Interior Designer",
-  //     image: "/placeholder.svg?height=400&width=400",
-  //     bio: "Sophia specializes in creating harmonious living spaces that reflect the personality and lifestyle of each client. Her approach combines minimalist principles with warm, inviting elements that make spaces feel like home.",
-  //     social: {
-  //       instagram: "#",
-  //       linkedin: "#",
-  //       twitter: "#",
-  //     },
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "Marcus Johnson",
-  //     position: "Architectural Designer",
-  //     image: "/placeholder.svg?height=400&width=400",
-  //     bio: "Marcus focuses on the structural and spatial aspects of design, ensuring that every project is not only beautiful but also structurally sound and optimally functional. His background in engineering brings a technical precision to the creative process.",
-  //     social: {
-  //       instagram: "#",
-  //       linkedin: "#",
-  //       twitter: "#",
-  //     },
-  //   },
-  //   {
-  //     id: 4,
-  //     name: "Olivia Patel",
-  //     position: "Project Manager",
-  //     image: "/placeholder.svg?height=400&width=400",
-  //     bio: "Olivia oversees the execution of projects from concept to completion, ensuring that every detail is perfectly implemented. Her meticulous attention to detail and excellent communication skills keep projects running smoothly and on schedule.",
-  //     social: {
-  //       instagram: "#",
-  //       linkedin: "#",
-  //       twitter: "#",
-  //     },
-  //   },
-  // ]
 
   return (
     <main className="bg-black text-white min-h-screen">
@@ -71,7 +22,8 @@ export default function AboutPage() {
       <WhatsAppButton />
 
       {/* Navigation */}
-      <header className="p-6 flex justify-between items-center">
+      <Header/>
+      {/* <header className="p-6 flex justify-between items-center">
         <Link href="/" className="text-xl font-light">
           woodyork
         </Link>
@@ -96,7 +48,7 @@ export default function AboutPage() {
           </Link>
         </nav>
         <div className="md:hidden text-xs">menu</div>
-      </header>
+      </header> */}
 
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center">

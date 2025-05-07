@@ -3,6 +3,7 @@ import Link from "next/link"
 import { WorkflowSection } from "@/components/workflow-section"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { AnimatedSection } from "@/components/animated-section"
+import { Header } from "@/components/header"
 
 export default function ServicesPage() {
   return (
@@ -11,7 +12,8 @@ export default function ServicesPage() {
       <WhatsAppButton />
 
       {/* Navigation */}
-      <header className="p-6 flex justify-between items-center">
+      <Header/>
+      {/* <header className="p-6 flex justify-between items-center">
         <Link href="/" className="text-xl font-light">
           woodyork
         </Link>
@@ -36,7 +38,7 @@ export default function ServicesPage() {
           </Link>
         </nav>
         <div className="md:hidden text-xs">menu</div>
-      </header>
+      </header> */}
 
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center">
