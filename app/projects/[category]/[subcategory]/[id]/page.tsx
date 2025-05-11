@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { AnimatedSection } from "@/components/animated-section";
 import { getProjectById, getRelatedProjects } from "@/lib/projects";
+import { MediaGallery } from "@/components/media-gallery";
+import { FullscreenViewer } from "@/components/fullscreen-viewer";
 
 interface ProjectDetailPageProps {
   params: {
@@ -50,50 +52,41 @@ export default async function ProjectDetailPage({
       <WhatsAppButton />
 
       {/* Navigation */}
-      <header className="p-6 md:p-8 lg:p-10 flex justify-between items-center">
-        <Link
-          href="/"
-          className="text-2xl md:text-3xl font-light tracking-wider"
-        >
+      <header className="p-6 flex justify-between items-center">
+        <Link href="/" className="text-xl font-light">
           woodyork
         </Link>
-        <nav className="hidden md:flex space-x-10 text-base">
+        <nav className="hidden md:flex space-x-6 text-sm">
           <Link
             href="/about"
-            className="text-gray-400 hover:text-white transition-colors duration-300"
+            className="text-amber-300 hover:text-amber-200 transition"
           >
             about
           </Link>
           <Link
             href="/projects"
-            className="text-amber-300 hover:text-amber-200 transition-colors duration-300"
+            className="text-gray-400 hover:text-white transition"
           >
             projects
           </Link>
           <Link
             href="/services"
-            className="text-gray-400 hover:text-white transition-colors duration-300"
+            className="text-gray-400 hover:text-white transition"
           >
             services
           </Link>
-          <Link
-            href="/contact"
-            className="text-gray-400 hover:text-white transition-colors duration-300"
-          >
-            contact
-          </Link>
         </nav>
+        <div className="md:hidden text-xs">menu</div>
       </header>
 
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=800&width=1600"
+            src={project.image || "/placeholder.svg"}
             alt={project.title}
             fill
-            className="object-cover brightness-50"
-            priority
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
           />
         </div>
         <AnimatedSection
@@ -297,26 +290,56 @@ export default async function ProjectDetailPage({
           </h2>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {project.gallery.map((image, i) => (
-            <AnimatedSection
-              key={i}
-              animation="fade-in"
-              delay={i * 100}
-              className="hover-lift"
-            >
-              <div className="relative h-64 md:h-72 overflow-hidden rounded-sm">
-                <Image
-                  src={image || "/placeholder.svg"}
-                  alt={`Gallery image ${i + 1}`}
-                  fill
-                  className="object-cover transition-transform duration-500 hover:scale-105"
-                />
-              </div>
-            </AnimatedSection>
-          ))}
-        </div>
+        <MediaGallery media={project.gallery} />
       </section>
+
+      {/* Related Projects */}
+      {relatedProjects.length > 0 && (
+        <section className="py-16 px-4 md:px-8 lg:px-16">
+          <AnimatedSection animation="fade-in" className="mb-10">
+            <h2 className="text-3xl md:text-4xl font-light mb-8">
+              Related Projects
+            </h2>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {relatedProjects.map((relatedProject) => (
+              <AnimatedSection
+                key={relatedProject.id}
+                animation="fade-in"
+                className="hover-lift"
+              >
+                <div className="bg-zinc-950 overflow-hidden group h-full">
+                  <div className="relative h-64 overflow-hidden">
+                    <Image
+                      src={relatedProject.image || "/placeholder.svg"}
+                      alt={relatedProject.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute top-4 left-4 bg-black/70 text-xs md:text-sm px-3 py-1 rounded-sm">
+                      {relatedProject.subcategory
+                        .replace(/-/g, " ")
+                        .replace(/\b\w/g, (l) => l.toUpperCase())}
+                    </div>
+                  </div>
+                  <div className="p-6 md:p-8 flex flex-col items-center">
+                    <h3 className="text-xl md:text-2xl font-medium mb-4 text-center">
+                      {relatedProject.title}
+                    </h3>
+                    <Link
+                      href={`/projects/${relatedProject.category}/${relatedProject.subcategory}/${relatedProject.id}`}
+                      className="border border-white/30 text-sm md:text-base px-5 py-2 hover:bg-white/10 transition-colors"
+                    >
+                      View Detail
+                    </Link>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Related Projects */}
       {relatedProjects.length > 0 && (
@@ -380,7 +403,7 @@ export default async function ProjectDetailPage({
             your vision.
           </p>
           <Link
-            href="/contact"
+            href="/"
             className="inline-block border-2 border-amber-300 text-amber-300 text-base md:text-lg px-8 py-3 hover:bg-amber-300 hover:text-black transition-colors"
           >
             Get in Touch

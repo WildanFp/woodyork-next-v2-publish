@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -9,58 +11,10 @@ import {
   Twitter,
 } from "lucide-react";
 import { WhatsAppButton } from "@/components/whatsapp-button";
+import { AnimatedSection } from "@/components/animated-section";
+import { Header } from "@/components/header";
 
 export default function AboutPage() {
-  // const teamMembers = [
-  //   {
-  //     id: 1,
-  //     name: "Alexander Wright",
-  //     position: "Founder & Principal Designer",
-  //     image: "/placeholder.svg?height=400&width=400",
-  //     bio: "Alexander brings over 15 years of experience in interior and architectural design. With a background in fine arts and architecture from the Royal College of Art, he founded woodyork with a vision to create spaces that blend functionality with artistic expression.",
-  //     social: {
-  //       instagram: "#",
-  //       linkedin: "#",
-  //       twitter: "#",
-  //     },
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "Sophia Chen",
-  //     position: "Senior Interior Designer",
-  //     image: "/placeholder.svg?height=400&width=400",
-  //     bio: "Sophia specializes in creating harmonious living spaces that reflect the personality and lifestyle of each client. Her approach combines minimalist principles with warm, inviting elements that make spaces feel like home.",
-  //     social: {
-  //       instagram: "#",
-  //       linkedin: "#",
-  //       twitter: "#",
-  //     },
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "Marcus Johnson",
-  //     position: "Architectural Designer",
-  //     image: "/placeholder.svg?height=400&width=400",
-  //     bio: "Marcus focuses on the structural and spatial aspects of design, ensuring that every project is not only beautiful but also structurally sound and optimally functional. His background in engineering brings a technical precision to the creative process.",
-  //     social: {
-  //       instagram: "#",
-  //       linkedin: "#",
-  //       twitter: "#",
-  //     },
-  //   },
-  //   {
-  //     id: 4,
-  //     name: "Olivia Patel",
-  //     position: "Project Manager",
-  //     image: "/placeholder.svg?height=400&width=400",
-  //     bio: "Olivia oversees the execution of projects from concept to completion, ensuring that every detail is perfectly implemented. Her meticulous attention to detail and excellent communication skills keep projects running smoothly and on schedule.",
-  //     social: {
-  //       instagram: "#",
-  //       linkedin: "#",
-  //       twitter: "#",
-  //     },
-  //   },
-  // ]
 
   return (
     <main className="bg-black text-white min-h-screen">
@@ -68,7 +22,8 @@ export default function AboutPage() {
       <WhatsAppButton />
 
       {/* Navigation */}
-      <header className="p-6 flex justify-between items-center">
+      <Header/>
+      {/* <header className="p-6 flex justify-between items-center">
         <Link href="/" className="text-xl font-light">
           woodyork
         </Link>
@@ -91,21 +46,15 @@ export default function AboutPage() {
           >
             services
           </Link>
-          <Link
-            href="/contact"
-            className="text-gray-400 hover:text-white transition"
-          >
-            contact
-          </Link>
         </nav>
         <div className="md:hidden text-xs">menu</div>
-      </header>
+      </header> */}
 
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/DSC01402.jpg?height=800&width=1600"
+            src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745780247/DSC01402_f4lehw.jpg?height=800&width=1600"
             alt="Interior design studio"
             fill
             className="object-cover brightness-50"
@@ -130,7 +79,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-2xl font-light mb-6">Our Story</h2>
               <div className="space-y-4">
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-about text-gray-300 leading-relaxed">
                   Woodyork berdiri dengan komitmen untuk menghadirkan solusi
                   desain interior yang terintegrasi menggabungkan kreativitas
                   perancangan ruang dengan keahlian dalam pembuatan furnitur
@@ -138,14 +87,14 @@ export default function AboutPage() {
                   tugas kami adalah menerjemahkan cerita tersebut menjadi desain
                   yang fungsional, estetis, dan sesuai dengan karakter klien.
                 </p>
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-about text-gray-300 leading-relaxed">
                   Didirikan di Malang, Woodyork memulai perjalanannya dari skala
                   lokal, dengan fokus pada detail, kualitas, dan pendekatan yang
                   personal. Seiring waktu, kami berkembang menjadi studio yang
                   dipercaya menangani berbagai proyek, mulai dari hunian pribadi
                   hingga ruang komersial, di berbagai kota.
                 </p>
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-about text-gray-300 leading-relaxed">
                   Keunggulan Woodyork terletak pada pendekatan desain yang
                   menyeluruh dimulai dari proses perencanaan ruang, visualisasi,
                   hingga pembuatan furnitur yang dirancang secara spesifik untuk
@@ -156,7 +105,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="relative h-80 md:h-96">
+            <div className="relative h-80 mt-20">
               <div className="overflow-hidden rounded-sm">
                 <video width="780" height="480" controls>
                   <source
@@ -174,50 +123,47 @@ export default function AboutPage() {
       {/* Philosophy & Values */}
       <section className="py-16 px-4 md:px-8 lg:px-16 bg-zinc-950">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-normal mb-1 text-center ">
+          {/* <h2 className="text-2xl font-normal mb-1 text-center ">
             “Karya yang Baik Dimulai dari Proses yang Dihargai”
+          </h2> */}
+          <h2 className="text-2xl font-normal mb-10 text-center ">
+            Kenapa Pilih Woodyork?
           </h2>
-          <h2 className="text-sm font-light mb-12 text-center">
+          {/* <h2 className="text-sm font-light mb-12 text-center">
             Motto ini mencerminkan filosofi kerja Woodyork: bahwa keindahan dan
             kualitas sebuah desain interior maupun furnitur tidak datang secara
             instan. Dibalik setiap karya yang memuaskan, ada proses panjang yang
             penuh pertimbangan, diskusi, revisi, dan perhatian terhadap detail.
-          </h2>
+          </h2> */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-zinc-900 p-8 rounded-sm">
               <div className="w-12 h-12 rounded-full border border-amber-300 flex items-center justify-center mb-6">
                 <span className="text-amber-300 text-xl">1</span>
               </div>
-              <h3 className="text-lg font-medium mb-4">
-                Menghargai proses = menghargai klien.
-              </h3>
+              <h3 className="text-lg font-medium mb-4">DESIGN</h3>
               <p className="text-sm text-gray-300 leading-relaxed">
-                Setiap proyek adalah perjalanan yang harus benar-benar mewakili
-                kebutuhan dan keinginan klien.
+                Kami merancang konsep interior serta ekterior yang mencerminkan
+                gaya hidup dan karakter klien.
               </p>
             </div>
             <div className="bg-zinc-900 p-8 rounded-sm">
               <div className="w-12 h-12 rounded-full border border-amber-300 flex items-center justify-center mb-6">
                 <span className="text-amber-300 text-xl">2</span>
               </div>
-              <h3 className="text-lg font-medium mb-4">
-                Detail menentukan segalanya.
-              </h3>
+              <h3 className="text-lg font-medium mb-4">BUILD</h3>
               <p className="text-sm text-gray-300 leading-relaxed">
-                Ukuran, material, tekstur, hingga pencahayaan semua diperhatikan
-                dengan seksama.
+                Kami membangun ruang yang nyaman, siap digunakan, dan sesuai
+                impian klien.
               </p>
             </div>
             <div className="bg-zinc-900 p-8 rounded-sm">
               <div className="w-12 h-12 rounded-full border border-amber-300 flex items-center justify-center mb-6">
                 <span className="text-amber-300 text-xl">3</span>
               </div>
-              <h3 className="text-lg font-medium mb-4">
-                Kualitas bukan kebetulan.
-              </h3>
+              <h3 className="text-lg font-medium mb-4">CUSTOM</h3>
               <p className="text-sm text-gray-300 leading-relaxed">
-                Hasil yang baik lahir dari proses yang matang, bukan dari
-                sesuatu yang instan.
+                Kami membuat furnitur khusus yang menyesuaikan ukuran, fungsi,
+                dan selera klien.
               </p>
             </div>
           </div>
@@ -290,20 +236,27 @@ export default function AboutPage() {
       {/* Contact CTA */}
       <section className="py-16 px-4 md:px-8 lg:px-16">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-light mb-6">
+          <h2 className="text-3xl md:text-4xl font-light mb-6">
             Ready to Transform Your Space?
           </h2>
-          <p className="text-sm text-gray-300 mb-8 max-w-2xl mx-auto">
-            Whether you're looking to redesign a single room or undertake a
-            complete renovation, our team is ready to bring your vision to life.
-            Let's create something exceptional together.
+          <p className="text-lg md:text-xl text-gray-300 mb-10">
+            Contact us today to discuss your project and discover how our
+            services can bring your vision to life.
           </p>
-          <Link
-            href="/contact"
-            className="border border-amber-300 text-amber-300 text-sm px-8 py-3 hover:bg-amber-300 hover:text-black transition"
+          <button
+            onClick={() => {
+              const phoneNumber = "6281230952808"; // Replace with actual number (no + or spaces)
+              const message =
+                "Hello, I'm interested in your design services. Can you provide more information?";
+              const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                message
+              )}`;
+              window.open(whatsappUrl, "_blank");
+            }}
+            className="inline-block border-2 border-amber-300 text-amber-300 text-base md:text-lg px-8 py-3 hover:bg-amber-300 hover:text-black transition-colors"
           >
             Get in Touch
-          </Link>
+          </button>
         </div>
       </section>
 
@@ -316,17 +269,13 @@ export default function AboutPage() {
               <MapPin className="w-8 h-8 mb-4 text-amber-300" />
               <h3 className="text-lg font-medium mb-2">Visit Our Studio</h3>
               <p className="text-sm text-gray-300">
-                Jalan Pemuda Raya
-                <br />
-                Kav. 15 Blok 23A, 203
-                <br />
-                Kelapa Gading, 14240
+                Perumahan Graha Pakis Permai, Blok C20, Malang, Jawa Timur
               </p>
             </div>
             <div className="bg-zinc-900 p-8 rounded-sm flex flex-col items-center text-center">
               <Phone className="w-8 h-8 mb-4 text-amber-300" />
               <h3 className="text-lg font-medium mb-2">Call Us</h3>
-              <p className="text-sm text-gray-300">+62 812 3456 7890</p>
+              <p className="text-sm text-gray-300"> +62 812 3095 2808</p>
               <p className="text-sm text-gray-300 mt-2">
                 Monday - Friday: 9am - 6pm
               </p>
@@ -334,7 +283,7 @@ export default function AboutPage() {
             <div className="bg-zinc-900 p-8 rounded-sm flex flex-col items-center text-center">
               <Mail className="w-8 h-8 mb-4 text-amber-300" />
               <h3 className="text-lg font-medium mb-2">Email Us</h3>
-              <p className="text-sm text-gray-300">woodyork@gmail.com</p>
+              <p className="text-sm text-gray-300">woodyork.id@gmail.com</p>
               <p className="text-sm text-gray-300 mt-2">
                 We'll respond within 24 hours
               </p>
@@ -447,7 +396,7 @@ export default function AboutPage() {
         </div>
 
         <div className="text-center text-xs text-gray-600">
-          ©2023 woodyork. All rights reserved - Produced by Volstabs
+          ©2025 woodyork. All rights reserved - Produced by Voxlabs
         </div>
       </footer>
     </main>

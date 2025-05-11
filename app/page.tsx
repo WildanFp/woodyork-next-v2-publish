@@ -13,8 +13,19 @@ import ShinyText from "./components/ShinyText/ShinyText";
 import CountUp from "./components/CountUp/CountUp";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import ImageComparison from "@/components/ui/compare";
+import { Header } from "@/components/header";
+import { MobileMenu } from "@/components/mobile-menu";
+import { usePathname } from "next/navigation";
+import { Menu } from "lucide-react";
 
 export default function Home() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (path: string) => {
+    return pathname === path;
+  };
+
   return (
     <main className="bg-black text-white min-h-screen">
       <WhatsAppButton />
@@ -27,7 +38,8 @@ export default function Home() {
             "url('https://res.cloudinary.com/dec19xsoi/image/upload/v1745780247/DSC01402_f4lehw.jpg')",
         }}
       >
-        <header className="p-6 flex justify-between items-center bg-black bg-opacity-90">
+        <Header/>
+        {/* <header className="p-6 flex justify-between items-center bg-black bg-opacity-90">
           <Link href="/" className="text-xl font-light">
             woodyork
           </Link>
@@ -50,31 +62,28 @@ export default function Home() {
             >
               services
             </Link>
-            <Link
-              href="/contact"
-              className="text-gray-400 hover:text-white transition"
-            >
-              contact
-            </Link>
           </nav>
-          <div className="md:hidden text-xs">menu</div>
-        </header>
+          <button
+            className="md:hidden text-base flex items-center"
+            onClick={() => setIsMobileMenuOpen(true)}
+            aria-label="Open menu"
+          >
+            <Menu size={24} />
+          </button>
+          <MobileMenu
+            isOpen={isMobileMenuOpen}
+            onClose={() => setIsMobileMenuOpen(false)}
+          />
+        </header> */}
 
         <div className="flex-1 flex flex-col items-center justify-center relative">
-          {/* <AnimatedSection animation="scale-in">
-            <div className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full border-2 border-amber-300 flex items-center justify-center mb-10 shadow-[0_0_15px_rgba(217,119,6,0.3)]">
-              <span className="text-amber-300 text-7xl md:text-8xl font-serif">
-                W.
-              </span>
-            </div>
-          </AnimatedSection> */}
           <span>
             <BlurText
-              text="we're welcoming you always."
+              text="One Stop Solution for Your Dream Space."
               delay={200}
               animateBy="words"
               direction="top"
-              className="text-2xl md:text-5xl mb-8"
+              className="text-1xl md:text-5xl mb-8"
             />
           </span>
 
@@ -97,7 +106,7 @@ export default function Home() {
       {/* About Us Section */}
       <section className="section-padding">
         <AnimatedSection animation="slide-in-left">
-          <h2 className="uppercase text-base md:text-lg mb-10 tracking-widest">
+          <h2 className="uppercase text-base md:text-lg mb-10 tracking-widest font-bold">
             About <span className="font-medium">Us</span>
           </h2>
         </AnimatedSection>
@@ -138,14 +147,17 @@ export default function Home() {
               <div className="flex gap-16 mt-6">
                 <div className="text-center">
                   <h3 className="text-5xl md:text-6xl font-light">
-                    <CountUp
-                      from={0}
-                      to={120}
-                      separator=","
-                      direction="up"
-                      duration={1}
-                      className="count-up-text"
-                    />
+                    <div className="flex gap text-center">
+                      <CountUp
+                        from={0}
+                        to={200}
+                        separator=","
+                        direction="up"
+                        duration={1}
+                        className="count-up-text"
+                      />
+                      <h3 className="mt-2">+</h3>
+                    </div>
                   </h3>
                   <p className="text-base md:text-lg text-gray-500">
                     projects finished
@@ -192,7 +204,7 @@ export default function Home() {
       <section className="section-padding">
         <AnimatedSection animation="fade-in" className="text-center mb-10">
           <h2>
-            <span className="uppercase text-base md:text-lg tracking-widest">
+            <span className="uppercase text-base md:text-lg tracking-widest font-bold">
               OUR{" "}
             </span>
             <span className="uppercase text-base md:text-lg font-light italic tracking-widest">
@@ -241,54 +253,69 @@ export default function Home() {
       <section className="section-padding">
         <AnimatedSection animation="fade-in" className="text-center mb-16">
           <h2>
-            <span className="uppercase text-base md:text-lg font-light italic tracking-widest">
+            <span className="uppercase text-base md:text-lg font-medium italic tracking-widest">
               FEATURED{" "}
             </span>
-            <span className="uppercase text-base md:text-lg tracking-widest">
+            <span className="uppercase text-base md:text-lg tracking-widest font-bold">
               PROJECT
             </span>
           </h2>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          <AnimatedSection
-            animation="slide-in-left"
-            className="relative overflow-hidden rounded-sm"
-          >
-            <div className="absolute top-6 left-6 bg-black/70 text-base px-3 py-1 z-10">
-              Design
-            </div>
-            <Image
-              src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745772911/c16_fn9xij.png"
-              width={500}
-              height={300}
-              alt="Project before"
-              className="w-full h-auto transition-transform duration-700 hover:scale-105"
-            />
-          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <AnimatedSection
+              animation="slide-in-left"
+              className="relative overflow-hidden rounded-sm"
+            >
+              <div className="absolute top-6 left-6 bg-black/70 text-base px-3 py-1 z-10">
+                Design
+              </div>
+              <Image
+                src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745895173/E3_igcygf.png"
+                width={500}
+                height={300}
+                alt="Project before"
+                className="w-full h-auto transition-transform duration-700 hover:scale-105"
+              />
+            </AnimatedSection>
 
-          <AnimatedSection
-            animation="slide-in-right"
-            className="relative overflow-hidden rounded-sm"
-          >
-            <div className="absolute top-6 left-6 bg-black/70 text-base px-3 py-1 z-10">
-              Reality
-            </div>
-            <Image
-              src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745772812/KRISTY-02493_temsk5.jpg"
-              width={500}
-              height={300}
-              alt="Project after"
-              className="w-full h-auto transition-transform duration-700 hover:scale-105"
-            />
-          </AnimatedSection>
-        </div>
+            <AnimatedSection
+              animation="slide-in-right"
+              className="relative overflow-hidden rounded-sm"
+            >
+              <div className="absolute top-6 left-6 bg-black/70 text-base px-3 py-1 z-10">
+                Reality
+              </div>
+              <Image
+                src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745895298/E33_umaptr.png"
+                width={500}
+                height={300}
+                alt="Project after"
+                className="w-full h-auto transition-transform duration-700 hover:scale-105"
+              />
+            </AnimatedSection>
+          </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {[
-            { title: "Modern Luxury", subtitle: "Interior Design" },
-            { title: "Modern Minimalist", subtitle: "Interior Design" },
-            { title: "Japanese Minimalist", subtitle: "Interior Design" },
+            {
+              title: "Modern Luxury",
+              subtitle: "Store Design",
+              image:
+                "https://res.cloudinary.com/dec19xsoi/image/upload/v1745771486/F1_soorgo.png?height=200&width=400",
+            },
+            {
+              title: "Modern Minimalist",
+              subtitle: "Interior Design",
+              image:
+                "https://res.cloudinary.com/dec19xsoi/image/upload/v1745772490/C24_qd9rq5.png?height=200&width=400",
+            },
+            {
+              title: "Japanese Minimalist",
+              subtitle: "Interior Design",
+              image:
+                "https://res.cloudinary.com/dec19xsoi/image/upload/v1745886493/B1_xjwric.png?height=200&width=400",
+            },
           ].map((project, i) => (
             <AnimatedSection key={i} animation="fade-in" delay={i * 200}>
               <HoverCard
@@ -302,7 +329,7 @@ export default function Home() {
               >
                 <div className="relative cursor-pointer">
                   <Image
-                    src="/placeholder.svg?height=200&width=400"
+                    src={project.image || "/placeholder.svg"}
                     width={400}
                     height={200}
                     alt={project.title}
@@ -337,61 +364,36 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="section-padding">
-        <AnimatedSection animation="slide-in-left" className="mb-10">
-          <h2>
-            <span className="uppercase text-base md:text-lg tracking-widest">
-              Contact{" "}
-            </span>
-            <span className="uppercase text-base md:text-lg font-medium tracking-widest">
-              Us
-            </span>
+      <section className="py-16 px-4 md:px-8 lg:px-16 bg-zinc-950">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-light mb-12 text-center">
+            Konsultasi Sekarang
           </h2>
-        </AnimatedSection>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            {
-              icon: <MapPin className="w-8 h-8 mb-5" />,
-              title: "Visit Us",
-              content: (
-                <p className="text-base text-gray-400">
-                  Jalan Pemuda Raya
-                  <br />
-                  Kav. 15 Blok 23A, 203
-                  <br />
-                  Kelapa Gading, 14240
-                </p>
-              ),
-            },
-            {
-              icon: <Phone className="w-8 h-8 mb-5" />,
-              title: "Call Us",
-              content: (
-                <p className="text-base text-gray-400">+62 812 3456 7890</p>
-              ),
-            },
-            {
-              icon: <Instagram className="w-8 h-8 mb-5" />,
-              title: "Our Instagram",
-              content: <p className="text-base text-gray-400">@woodyork</p>,
-            },
-            {
-              icon: <Mail className="w-8 h-8 mb-5" />,
-              title: "Email Us",
-              content: (
-                <p className="text-base text-gray-400">woodyork@gmail.com</p>
-              ),
-            },
-          ].map((item, i) => (
-            <AnimatedSection key={i} animation="fade-in" delay={i * 150}>
-              <div className="card hover-lift card-hover">
-                {item.icon}
-                <h3 className="text-lg md:text-xl mb-3">{item.title}</h3>
-                {item.content}
-              </div>
-            </AnimatedSection>
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-zinc-900 p-8 rounded-sm flex flex-col items-center text-center">
+              <MapPin className="w-8 h-8 mb-4 text-amber-300" />
+              <h3 className="text-lg font-medium mb-2">Lokasi Woodyork</h3>
+              <p className="text-sm text-gray-300">
+                Perumahan Graha Pakis Permai, Blok C20, Malang, Jawa Timur
+              </p>
+            </div>
+            <div className="bg-zinc-900 p-8 rounded-sm flex flex-col items-center text-center">
+              <Phone className="w-8 h-8 mb-4 text-amber-300" />
+              <h3 className="text-lg font-medium mb-2">Telepon & Whatsapp</h3>
+              <p className="text-sm text-gray-300"> +62 812 3095 2808</p>
+              {/* <p className="text-sm text-gray-300 mt-2">
+                Senin - Jumat: 9.00 - 18.00
+              </p> */}
+            </div>
+            <div className="bg-zinc-900 p-8 rounded-sm flex flex-col items-center text-center">
+              <Mail className="w-8 h-8 mb-4 text-amber-300" />
+              <h3 className="text-lg font-medium mb-2">Hubungi Via Email</h3>
+              <p className="text-sm text-gray-300">woodyork.id@gmail.com</p>
+              {/* <p className="text-sm text-gray-300 mt-2">
+                We'll respond within 24 hours
+              </p> */}
+            </div>
+          </div>
         </div>
       </section>
 

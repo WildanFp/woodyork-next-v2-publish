@@ -9,6 +9,7 @@ import {
   getProjectsBySubcategory,
 } from "@/lib/projects";
 import type { ProjectCategory, ProjectSubcategory } from "@/lib/projects";
+import { Header } from "@/components/header";
 
 interface SearchParams {
   category?: string;
@@ -47,40 +48,33 @@ export default async function ProjectsPage({
       <WhatsAppButton />
 
       {/* Navigation */}
-      <header className="p-6 md:p-8 lg:p-10 flex justify-between items-center">
-        <Link
-          href="/"
-          className="text-2xl md:text-3xl font-light tracking-wider"
-        >
+      <Header/>
+      {/* <header className="p-6 flex justify-between items-center">
+        <Link href="/" className="text-xl font-light">
           woodyork
         </Link>
-        <nav className="hidden md:flex space-x-10 text-base">
+        <nav className="hidden md:flex space-x-6 text-sm">
           <Link
             href="/about"
-            className="text-gray-400 hover:text-white transition-colors duration-300"
+            className="text-gray-400 hover:text-white transition"
           >
             about
           </Link>
           <Link
             href="/projects"
-            className="text-amber-300 hover:text-amber-200 transition-colors duration-300"
+            className="text-amber-300 hover:text-amber-200 transition"
           >
             projects
           </Link>
           <Link
             href="/services"
-            className="text-gray-400 hover:text-white transition-colors duration-300"
+            className="text-gray-400 hover:text-white transition"
           >
             services
           </Link>
-          <Link
-            href="/contact"
-            className="text-gray-400 hover:text-white transition-colors duration-300"
-          >
-            contact
-          </Link>
         </nav>
-      </header>
+        <div className="md:hidden text-xs">menu</div>
+      </header> */}
 
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center">
