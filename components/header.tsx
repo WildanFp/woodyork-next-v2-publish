@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 import { MobileMenu } from "./mobile-menu";
+import Image from "next/image";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -21,7 +22,13 @@ export function Header() {
           href="/"
           className="text-2xl md:text-3xl font-light tracking-wider"
         >
-          woodyork
+          <Image
+            src="https://res.cloudinary.com/dec19xsoi/image/upload/v1747049232/W_kayu_zti4i7.png"
+            alt="Logo"
+            width={70}
+            height={70}
+          />
+          <span></span>
         </Link>
         <nav className="hidden md:flex space-x-10 text-base">
           <Link
