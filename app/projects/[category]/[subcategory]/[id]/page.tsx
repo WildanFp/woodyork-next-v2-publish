@@ -6,6 +6,7 @@ import { AnimatedSection } from "@/components/animated-section";
 import { getProjectById, getRelatedProjects } from "@/lib/projects";
 import { MediaGallery } from "@/components/media-gallery";
 import { FullscreenViewer } from "@/components/fullscreen-viewer";
+import { Header } from "@/components/header";
 
 interface ProjectDetailPageProps {
   params: {
@@ -52,7 +53,8 @@ export default async function ProjectDetailPage({
       <WhatsAppButton />
 
       {/* Navigation */}
-      <header className="p-6 flex justify-between items-center">
+      <Header/>
+      {/* <header className="p-6 flex justify-between items-center">
         <Link href="/" className="text-xl font-light">
           woodyork
         </Link>
@@ -77,7 +79,7 @@ export default async function ProjectDetailPage({
           </Link>
         </nav>
         <div className="md:hidden text-xs">menu</div>
-      </header>
+      </header> */}
 
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center">
@@ -294,7 +296,7 @@ export default async function ProjectDetailPage({
       </section>
 
       {/* Related Projects */}
-      {relatedProjects.length > 0 && (
+      {/* {relatedProjects.length > 0 && (
         <section className="py-16 px-4 md:px-8 lg:px-16">
           <AnimatedSection animation="fade-in" className="mb-10">
             <h2 className="text-3xl md:text-4xl font-light mb-8">
@@ -339,7 +341,7 @@ export default async function ProjectDetailPage({
             ))}
           </div>
         </section>
-      )}
+      )} */}
 
       {/* Related Projects */}
       {relatedProjects.length > 0 && (
