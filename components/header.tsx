@@ -17,7 +17,7 @@ export function Header() {
 
   return (
     <>
-      <header className="p-6 md:p-8 lg:p-10 flex justify-between items-center">
+      <header className="p-6 flex justify-between items-center">
         <Link
           href="/"
           className="text-2xl md:text-3xl font-light tracking-wider"
