@@ -336,11 +336,28 @@ export const projects: Project[] = [
       "The design utilizes custom cabinetry and minimalistic furniture to maximize the use of space without making the room feel crowded. Neutral color tones paired with natural lighting create an open and inviting atmosphere.",
       "Material selection focused on durability and easy maintenance, perfect for a working environment requiring longevity and professionalism."
     ],
-    designImage: "/https://res.cloudinary.com/del1pfnko/image/upload/v1745770456/E1_d9cvxs.png",
-    realityImage: "/commercial/office/anggraini/reality/2daf0684-138d-475d-a79a-c3ceb0f0995e.jpg",
+    designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745770507/d10_zwhcho.png",
+    realityImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1747072259/DSC00014-min_y5oegy.png",
     gallery: [
-      "/commercial/office/anggraini/design/2daf0684-138d-475d-a79a-c3ceb0f0995e.jpg",
-      "/commercial/office/anggraini/reality/2daf0684-138d-475d-a79a-c3ceb0f0995e.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745770515/c12_xwbftp.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745770508/D3_pjtwai.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745770507/d10_zwhcho.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745770506/c13_f51t1v.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745770502/D4_mkjl0x.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745770456/E1_d9cvxs.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745770450/d8_xcm8uz.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745770450/D1_duk7n3.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745770444/d7_clmv56.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745770411/C9_z6qpzx.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747073698/DSC00032-min_zftzha.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747073691/DSC09975_v2-min_vuy5vi.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747073688/DSC09982-min_ji6e3f.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747073688/DSC09982-min_ji6e3f.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747072653/DSC00031-min_uwidav.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747072279/DSC00021-min_cacq5t.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747072259/DSC00014-min_y5oegy.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747072232/DSC00029-min_excxsg.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747072121/DSC00025-min_ewonai.png",
     ],
     features: [
       "Custom-built office desk and storage",
@@ -399,17 +416,17 @@ export const projects: Project[] = [
       "A selection of premium materials and custom furniture pieces bring sophistication and functionality to the space.",
     ],
     designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745772100/RT5_wbauod.png",
-    realityImage: "/placeholder.jpg",
+    realityImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1747091479/DSC01793-min_vtjnth.jpg",
     gallery: [
       "https://res.cloudinary.com/del1pfnko/image/upload/v1745772108/S3_lfrwzf.png",
-      "/placeholder.jpg",
       "https://res.cloudinary.com/del1pfnko/image/upload/v1745772107/RT4_xasotq.png",
-      "/placeholder.jpg",
       "https://res.cloudinary.com/del1pfnko/image/upload/v1745772104/RT7_rozuul.png",
-      "/placeholder.jpg",
       "https://res.cloudinary.com/del1pfnko/image/upload/v1745772103/RT2_nvcefa.png",
-      "/placeholder.jpg",
       "https://res.cloudinary.com/del1pfnko/image/upload/v1745772101/RT3_jp3xrc.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747091479/DSC01778-min_xtkemh.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747091479/DSC01793-min_vtjnth.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747091476/DSC01780-min_q1wtx7.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747091473/DSC01806-min_alpmoi.jpg",
     ],
     features: [
       "Custom-designed sofa with premium upholstery",
@@ -861,7 +878,7 @@ export const projects: Project[] = [
       "Soft furnishings and lively accents to stimulate imagination."
     ],
     designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745778859/C10_oeamvl.png",
-    realityImage: "/placeholder.jpg",
+    realityImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745778978/C24_jck0gj.png",
     gallery: [
       "https://res.cloudinary.com/del1pfnko/image/upload/v1745778944/C20_pmwtjn.png",
       "https://res.cloudinary.com/del1pfnko/image/upload/v1745778859/C10_oeamvl.png",
@@ -923,7 +940,7 @@ export const projects: Project[] = [
       "The room also features practical storage solutions to keep toys and belongings organized, maximizing the small space."
     ],
     designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745779864/E2_ynklwh.png",
-    realityImage: "/placeholder.jpg",
+    realityImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745779777/E1_jm5iwo.png",
     gallery: [
       "https://res.cloudinary.com/del1pfnko/image/upload/v1745779777/E1_jm5iwo.png",
       "https://res.cloudinary.com/del1pfnko/image/upload/v1745779781/E13_bz8x1r.png",
@@ -986,7 +1003,7 @@ export const projects: Project[] = [
       "Bright and airy ambiance with clean finishes."
     ],
     designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745780243/C13_orw4y7.png",
-    realityImage: "/placeholder.jpg",
+    realityImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745780286/C9_bpcapz.png",
     gallery: [
       "https://res.cloudinary.com/del1pfnko/image/upload/v1745780265/C5_cxtfly.png",
       "https://res.cloudinary.com/del1pfnko/image/upload/v1745780281/C7_ixbm2c.png",
@@ -1043,7 +1060,7 @@ export const projects: Project[] = [
       "Custom furniture was designed to ensure both functionality and comfort, with ample storage space."
     ],
     designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745780598/E2_oapbvb.png",
-    realityImage: "/placeholder.jpg",
+    realityImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745780783/E8_wc1gdr.png",
     gallery: [
       "https://res.cloudinary.com/del1pfnko/image/upload/v1745780598/E2_oapbvb.png",
       "https://res.cloudinary.com/del1pfnko/image/upload/v1745780603/E4_u7vcct.png",
@@ -1092,9 +1109,9 @@ export const projects: Project[] = [
   //Residential Projects Mrs. Aghnia
   {
     id: "mrs-aghnia-project",
-    title: "Family Room Mrs. Aghnia",
-    subtitle: "Spacious and Comfortable Family Room Design",
-    image: "/placeholder.jpg",
+    title: "Living Room Mrs. Aghnia",
+    subtitle: "Cozy and Elegant Living Room Design",
+    image: "https://res.cloudinary.com/del1pfnko/image/upload/v1745858308/C4_wtxf2r.png",
     category: "residential",
     subcategory: "living-room",
     location: "Malang",
@@ -1107,11 +1124,15 @@ export const projects: Project[] = [
       "Combining modern furnishings with a warm color palette to create a welcoming atmosphere.",
       "Optimized space for both relaxation and entertainment."
     ],
-    designImage: "/placeholder.jpg",
-    realityImage: "/placeholder.jpg",
+    designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745858310/C8_jmoiyy.png",
+    realityImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745858308/C4_wtxf2r.png",
     gallery: [
-      "/placeholder.jpg",
-      "/placeholder.jpg"
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745858327/C10_olcsgo.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745858319/C9_z09lsc.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745858310/C8_jmoiyy.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745858308/C4_wtxf2r.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745858302/C5_cxrzi2.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745858280/C3_o4jhff.png",
     ],
     features: [
       "Custom-built sofa",
@@ -1146,7 +1167,7 @@ export const projects: Project[] = [
     id: "mrs-farhana-project",
     title: "Family Room & Coffee Corner Mrs. Farhana",
     subtitle: "Comfortable and Elegant Family Room & Coffee Corner Design",
-    image: "/placeholder.jpg",
+    image: "https://res.cloudinary.com/dec19xsoi/image/upload/v1745883918/B1_kblu4g.png",
     category: "residential", 
     subcategory: "family-room", 
     location: "Madura, Bangkalan",
@@ -1159,8 +1180,8 @@ export const projects: Project[] = [
       "The design features a combination of modern and traditional elements, providing a warm atmosphere for everyday use.",
       "Custom furniture pieces and ambient lighting were incorporated to enhance the space's inviting feel."
     ],
-    designImage: "/placeholder.jpg",
-    realityImage: "/placeholder.jpg",
+    designImage: "https://res.cloudinary.com/dec19xsoi/image/upload/v1745883918/B1_kblu4g.png",
+    realityImage: "https://res.cloudinary.com/dec19xsoi/image/upload/v1745883900/B11_evbjc3.png",
     gallery: [
       "https://res.cloudinary.com/dec19xsoi/image/upload/v1745883927/B8_zmi9xs.png",
       "https://res.cloudinary.com/dec19xsoi/image/upload/v1745883926/b4_wsvy8m.png",
