@@ -737,7 +737,7 @@ export const projects: Project[] = [
     id: "mrs-lamia-project",
     title: "Karyawan & Seating Area Mrs. Lamia",
     subtitle: "Efficient and Collaborative Karyawan & Seating Area Design",
-    image: "/placeholder.jpg",
+    image: "https://res.cloudinary.com/del1pfnko/image/upload/v1745809192/F2_vagrx9.png",
     category: "commercial",
     subcategory: "office",
     location: "Malang, Pakis",
@@ -750,23 +750,24 @@ export const projects: Project[] = [
       "The layout incorporates ergonomic seating and flexible workstations, with a modern aesthetic that promotes creativity and comfort.",
       "Lighting and materials were chosen to enhance the productivity of the space, ensuring that each corner offers both function and style."
     ],
-    designImage: "/placeholder.jpg",
-    realityImage: "/placeholder.jpg",
+    designImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745809186/F3_brxjr6.png",
+    realityImage: "https://res.cloudinary.com/del1pfnko/image/upload/v1745809388/DSC01443_pedzvq.jpg",
     gallery: [
-      "/placeholder.jpg",
-      "/placeholder.jpg"
-    ],
-    features: [
-      "Flexible seating arrangements with ergonomic chairs",
-      "Modular workstations for collaborative projects",
-      "Efficient lighting system for maximum productivity",
-      "Open space layout with plenty of natural light"
-    ],
-    materials: [
-      "Ergonomic office furniture",
-      "Polished wooden flooring",
-      "Modern lighting fixtures",
-      "Neutral color scheme with pops of bright accents"
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745809201/F4_tbuqnn.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745809198/E15_tnvay7.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745809192/F2_vagrx9.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745809186/F3_brxjr6.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745809388/DSC01443_pedzvq.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745809179/E13_n5kjfz.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745809175/F6_ku1qko.png",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1745809388/DSC01443_pedzvq.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747141498/DSC01292-min_i7gb6e.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747141498/DSC01253-min_pgkvpt.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747141506/DSC01235-min_oxqhkw.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747141514/DSC01353-min_xqelb0.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747141524/DSC01294-min_yljvfx.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747141525/DSC01349-min_wgq3fc.jpg",
+      "https://res.cloudinary.com/del1pfnko/image/upload/v1747141529/DSC01208-min_davfmu.jpg",
     ],
     relatedProjects: [
       {
