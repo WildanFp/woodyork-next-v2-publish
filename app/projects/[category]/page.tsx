@@ -1,53 +1,28 @@
 import Image from "next/image"
 import Link from "next/link"
-import { redirect } from "next/navigation"
+import { notFound } from "next/navigation"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { AnimatedSection } from "@/components/animated-section"
 import { ProjectFilter } from "@/components/project-filter"
-import { getAllProjects } from "@/lib/projects"
+import { getProjectsByCategory } from "@/lib/projects"
+import type { ProjectCategory } from "@/lib/projects"
 import { Header } from "@/components/header"
 
-interface SearchParams {
-  category?: string
-  subcategory?: string
+interface CategoryPageProps {
+  params: {
+    category: string
+  }
 }
 
-export default async function ProjectsPage({
-  searchParams,
-}: {
-  searchParams: SearchParams
-}) {
-  // Redirect old query-based URLs to new path-based URLs
-  const category = searchParams?.category
-  const subcategory = searchParams?.subcategory
+export default async function CategoryPage({ params }: CategoryPageProps) {
+  const { category } = params
 
-  if (category && (category === "commercial" || category === "residential")) {
-    if (subcategory) {
-      // Convert subcategory with hyphens to match URL format (remove hyphens for compound words)
-      const convertToUrlFormat = (hyphenatedSubcategory: string): string => {
-        const mappings: Record<string, string> = {
-          "kids-bedroom": "kidsbedroom",
-          "coffee-shop": "coffeeshop",
-          "living-room": "livingroom",
-          "dining-room": "diningroom",
-          "home-office": "homeoffice",
-          "family-room": "familyroom",
-          "arabic-majlis": "arabicmajlis",
-          "kitchen-set": "kitchenset",
-        }
-
-        return mappings[hyphenatedSubcategory.toLowerCase()] || hyphenatedSubcategory.replace(/-/g, "")
-      }
-
-      const urlSubcategory = convertToUrlFormat(subcategory)
-      redirect(`/projects/${category}/${urlSubcategory}`)
-    } else {
-      redirect(`/projects/${category}`)
-    }
+  if (!category || (category !== "commercial" && category !== "residential")) {
+    notFound()
   }
 
-  // Show all projects by default
-  const filteredProjects = getAllProjects()
+  const categoryTyped = category as ProjectCategory
+  const filteredProjects = getProjectsByCategory(categoryTyped)
 
   return (
     <main className="bg-black text-white min-h-screen">
@@ -80,7 +55,7 @@ export default async function ProjectsPage({
       </section>
 
       {/* Project Filters */}
-      <ProjectFilter initialCategory="" initialSubcategory="" />
+      <ProjectFilter initialCategory={category} initialSubcategory="" />
 
       {/* Projects Grid */}
       <section className="py-16 px-4 md:px-8 lg:px-16">

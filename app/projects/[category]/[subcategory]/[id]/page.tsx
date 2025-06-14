@@ -1,51 +1,62 @@
-import Image from "next/image";
-import Link from "next/link";
-import { notFound } from "next/navigation";
-import { WhatsAppButton } from "@/components/whatsapp-button";
-import { AnimatedSection } from "@/components/animated-section";
-import { getProjectById, getRelatedProjects } from "@/lib/projects";
-import { MediaGallery } from "@/components/media-gallery";
-import { FullscreenViewer } from "@/components/fullscreen-viewer";
-import { Header } from "@/components/header";
+import Image from "next/image"
+import Link from "next/link"
+import { notFound } from "next/navigation"
+import { WhatsAppButton } from "@/components/whatsapp-button"
+import { AnimatedSection } from "@/components/animated-section"
+import { getProjectById, getRelatedProjects } from "@/lib/projects"
+import { MediaGallery } from "@/components/media-gallery"
+import { Header } from "@/components/header"
+import Head from "next/head"
 
 interface ProjectDetailPageProps {
   params: {
-    category: string;
-    subcategory: string;
-    id: string;
-  };
+    category: string
+    subcategory: string
+    id: string
+  }
 }
 
-export default async function ProjectDetailPage({
-  params,
-}: ProjectDetailPageProps) {
-  // Safely access params properties
-  const id = params?.id;
-  const category = params?.category;
-  const subcategory = params?.subcategory;
+export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) {
+  const { id, category, subcategory } = params
 
   if (!id || !category || !subcategory) {
-    notFound();
+    notFound()
   }
 
-  const project = getProjectById(id);
+  const project = getProjectById(id)
 
-  // If project doesn't exist or category/subcategory don't match, return 404
-  if (
-    !project ||
-    project.category !== category ||
-    project.subcategory !== subcategory
-  ) {
-    notFound();
+  // Convert URL subcategory back to hyphenated format for comparison
+  const convertUrlToHyphenated = (urlSubcategory: string): string => {
+    // Common mappings for compound words
+    const mappings: Record<string, string> = {
+      kidsbedroom: "kids-bedroom",
+      coffeeshop: "coffee-shop",
+      livingroom: "living-room",
+      diningroom: "dining-room",
+      homeoffice: "home-office",
+      familyroom: "family-room",
+      arabicmajlis: "arabic-majlis",
+      kitchenset: "kitchen-set",
+    }
+
+    // Check if we have a direct mapping
+    if (mappings[urlSubcategory.toLowerCase()]) {
+      return mappings[urlSubcategory.toLowerCase()]
+    }
+
+    // Otherwise, try to add hyphens before capital letters and convert to lowercase
+    return urlSubcategory.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase()
   }
 
-  // Get related projects
-  const relatedProjects = getRelatedProjects(project.id);
+  const subcategoryWithHyphens = convertUrlToHyphenated(subcategory)
 
-  // Format subcategory for display
-  const formattedSubcategory = project.subcategory
-    .replace(/-/g, " ")
-    .replace(/\b\w/g, (l) => l.toUpperCase());
+  if (!project || project.category !== category || project.subcategory !== subcategoryWithHyphens) {
+    notFound()
+  }
+
+  const relatedProjects = getRelatedProjects(project.id)
+
+  const formattedSubcategory = project.subcategory.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())
 
   return (
     <main className="bg-black text-white min-h-screen">
@@ -53,33 +64,15 @@ export default async function ProjectDetailPage({
       <WhatsAppButton />
 
       {/* Navigation */}
-      <Header/>
-      {/* <header className="p-6 flex justify-between items-center">
-        <Link href="/" className="text-xl font-light">
-          woodyork
-        </Link>
-        <nav className="hidden md:flex space-x-6 text-sm">
-          <Link
-            href="/about"
-            className="text-amber-300 hover:text-amber-200 transition"
-          >
-            about
-          </Link>
-          <Link
-            href="/projects"
-            className="text-gray-400 hover:text-white transition"
-          >
-            projects
-          </Link>
-          <Link
-            href="/services"
-            className="text-gray-400 hover:text-white transition"
-          >
-            services
-          </Link>
-        </nav>
-        <div className="md:hidden text-xs">menu</div>
-      </header> */}
+      <Head>
+        <title>{project.title} | Woodyork Projects</title>
+        <meta name="description" content={project.subtitle || "Project showcase by Woodyork"} />
+        <meta property="og:title" content={project.title} />
+        <meta property="og:description" content={project.subtitle} />
+        <meta property="og:image" content={project.image || "/placeholder.svg"} />
+        <meta property="og:type" content="website" />
+      </Head>
+      <Header />
 
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center">
@@ -91,18 +84,11 @@ export default async function ProjectDetailPage({
             className="object-cover transition-transform duration-500 group-hover:scale-110"
           />
         </div>
-        <AnimatedSection
-          animation="fade-in"
-          className="relative z-10 text-center px-4 max-w-4xl mx-auto"
-        >
+        <AnimatedSection animation="fade-in" className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <div className="mb-4">
-            <span className="text-amber-300 text-lg md:text-xl uppercase tracking-wider">
-              {formattedSubcategory}
-            </span>
+            <span className="text-amber-300 text-lg md:text-xl uppercase tracking-wider">{formattedSubcategory}</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6">
-            {project.title}
-          </h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6">{project.title}</h1>
           <p className="text-lg md:text-xl text-gray-300">{project.subtitle}</p>
         </AnimatedSection>
       </section>
@@ -114,15 +100,12 @@ export default async function ProjectDetailPage({
             Projects
           </Link>
           <span className="mx-2">/</span>
-          <Link
-            href={`/projects?category=${project.category}`}
-            className="hover:text-white transition-colors"
-          >
+          <Link href={`/projects/${project.category}`} className="hover:text-white transition-colors">
             {project.category === "residential" ? "Residential" : "Commercial"}
           </Link>
           <span className="mx-2">/</span>
           <Link
-            href={`/projects?category=${project.category}&subcategory=${project.subcategory}`}
+            href={`/projects/${project.category}/${project.subcategory.replace(/-/g, "")}`}
             className="hover:text-white transition-colors"
           >
             {formattedSubcategory}
@@ -135,16 +118,12 @@ export default async function ProjectDetailPage({
       {/* Transformation Section */}
       <section className="py-16 px-4 md:px-8 lg:px-16">
         <AnimatedSection animation="fade-in" className="mb-10">
-          <h2 className="text-3xl md:text-4xl font-light mb-8">
-            Transformation
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-light mb-8">Transformation</h2>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <AnimatedSection animation="slide-in-left" className="relative">
-            <div className="absolute top-6 left-6 bg-black/70 text-base px-3 py-1 z-10">
-              Design
-            </div>
+            <div className="absolute top-6 left-6 bg-black/70 text-base px-3 py-1 z-10">Design</div>
             <div className="relative h-72 md:h-96">
               <Image
                 src={project.designImage || "/placeholder.svg"}
@@ -156,9 +135,7 @@ export default async function ProjectDetailPage({
           </AnimatedSection>
 
           <AnimatedSection animation="slide-in-right" className="relative">
-            <div className="absolute top-6 left-6 bg-black/70 text-base px-3 py-1 z-10">
-              Reality
-            </div>
+            <div className="absolute top-6 left-6 bg-black/70 text-base px-3 py-1 z-10">Reality</div>
             <div className="relative h-72 md:h-96">
               <Image
                 src={project.realityImage || "/placeholder.svg"}
@@ -176,38 +153,25 @@ export default async function ProjectDetailPage({
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div className="lg:col-span-2">
             <AnimatedSection animation="fade-in" className="mb-8">
-              <h2 className="text-3xl md:text-4xl font-light mb-8">
-                Project Overview
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-light mb-8">Project Overview</h2>
             </AnimatedSection>
 
             <div className="space-y-6">
               {project.description.map((paragraph, i) => (
                 <AnimatedSection key={i} animation="fade-in" delay={i * 100}>
-                  <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                    {paragraph}
-                  </p>
+                  <p className="text-base md:text-lg text-gray-300 leading-relaxed">{paragraph}</p>
                 </AnimatedSection>
               ))}
             </div>
           </div>
 
           <div>
-            <AnimatedSection
-              animation="slide-in-right"
-              className="bg-zinc-900 p-8 rounded-sm"
-            >
-              <h3 className="text-xl md:text-2xl font-light mb-8">
-                Project Information
-              </h3>
+            <AnimatedSection animation="slide-in-right" className="bg-zinc-900 p-8 rounded-sm">
+              <h3 className="text-xl md:text-2xl font-light mb-8">Project Information</h3>
               <div className="space-y-5">
                 <div className="flex justify-between">
                   <span className="text-base text-gray-400">Category</span>
-                  <span className="text-base">
-                    {project.category === "residential"
-                      ? "Residential"
-                      : "Commercial"}
-                  </span>
+                  <span className="text-base">{project.category === "residential" ? "Residential" : "Commercial"}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-base text-gray-400">Type</span>
@@ -245,15 +209,10 @@ export default async function ProjectDetailPage({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {project.features && (
               <AnimatedSection animation="fade-in">
-                <h3 className="text-2xl md:text-3xl font-light mb-6">
-                  Features
-                </h3>
+                <h3 className="text-2xl md:text-3xl font-light mb-6">Features</h3>
                 <ul className="space-y-3">
                   {project.features.map((feature, i) => (
-                    <li
-                      key={i}
-                      className="text-base md:text-lg text-gray-300 flex items-start"
-                    >
+                    <li key={i} className="text-base md:text-lg text-gray-300 flex items-start">
                       <span className="text-amber-300 mr-2">•</span>
                       {feature}
                     </li>
@@ -264,15 +223,10 @@ export default async function ProjectDetailPage({
 
             {project.materials && (
               <AnimatedSection animation="fade-in" delay={200}>
-                <h3 className="text-2xl md:text-3xl font-light mb-6">
-                  Materials
-                </h3>
+                <h3 className="text-2xl md:text-3xl font-light mb-6">Materials</h3>
                 <ul className="space-y-3">
                   {project.materials.map((material, i) => (
-                    <li
-                      key={i}
-                      className="text-base md:text-lg text-gray-300 flex items-start"
-                    >
+                    <li key={i} className="text-base md:text-lg text-gray-300 flex items-start">
                       <span className="text-amber-300 mr-2">•</span>
                       {material}
                     </li>
@@ -287,78 +241,22 @@ export default async function ProjectDetailPage({
       {/* Gallery */}
       <section className="py-16 px-4 md:px-8 lg:px-16 bg-zinc-950">
         <AnimatedSection animation="fade-in" className="mb-10">
-          <h2 className="text-3xl md:text-4xl font-light mb-8">
-            Project Gallery
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-light mb-8">Project Gallery</h2>
         </AnimatedSection>
 
         <MediaGallery media={project.gallery} />
       </section>
 
       {/* Related Projects */}
-      {/* {relatedProjects.length > 0 && (
-        <section className="py-16 px-4 md:px-8 lg:px-16">
-          <AnimatedSection animation="fade-in" className="mb-10">
-            <h2 className="text-3xl md:text-4xl font-light mb-8">
-              Related Projects
-            </h2>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {relatedProjects.map((relatedProject) => (
-              <AnimatedSection
-                key={relatedProject.id}
-                animation="fade-in"
-                className="hover-lift"
-              >
-                <div className="bg-zinc-950 overflow-hidden group h-full">
-                  <div className="relative h-64 overflow-hidden">
-                    <Image
-                      src={relatedProject.image || "/placeholder.svg"}
-                      alt={relatedProject.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute top-4 left-4 bg-black/70 text-xs md:text-sm px-3 py-1 rounded-sm">
-                      {relatedProject.subcategory
-                        .replace(/-/g, " ")
-                        .replace(/\b\w/g, (l) => l.toUpperCase())}
-                    </div>
-                  </div>
-                  <div className="p-6 md:p-8 flex flex-col items-center">
-                    <h3 className="text-xl md:text-2xl font-medium mb-4 text-center">
-                      {relatedProject.title}
-                    </h3>
-                    <Link
-                      href={`/projects/${relatedProject.category}/${relatedProject.subcategory}/${relatedProject.id}`}
-                      className="border border-white/30 text-sm md:text-base px-5 py-2 hover:bg-white/10 transition-colors"
-                    >
-                      View Detail
-                    </Link>
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </section>
-      )} */}
-
-      {/* Related Projects */}
       {relatedProjects.length > 0 && (
         <section className="py-16 px-4 md:px-8 lg:px-16">
           <AnimatedSection animation="fade-in" className="mb-10">
-            <h2 className="text-3xl md:text-4xl font-light mb-8">
-              Related Projects
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-light mb-8">Related Projects</h2>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {relatedProjects.map((relatedProject) => (
-              <AnimatedSection
-                key={relatedProject.id}
-                animation="fade-in"
-                className="hover-lift"
-              >
+              <AnimatedSection key={relatedProject.id} animation="fade-in" className="hover-lift">
                 <div className="bg-zinc-950 overflow-hidden group h-full">
                   <div className="relative h-64 overflow-hidden">
                     <Image
@@ -368,17 +266,13 @@ export default async function ProjectDetailPage({
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute top-4 left-4 bg-black/70 text-xs md:text-sm px-3 py-1 rounded-sm">
-                      {relatedProject.subcategory
-                        .replace(/-/g, " ")
-                        .replace(/\b\w/g, (l) => l.toUpperCase())}
+                      {relatedProject.subcategory.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}
                     </div>
                   </div>
                   <div className="p-6 md:p-8 flex flex-col items-center">
-                    <h3 className="text-xl md:text-2xl font-medium mb-4 text-center">
-                      {relatedProject.title}
-                    </h3>
+                    <h3 className="text-xl md:text-2xl font-medium mb-4 text-center">{relatedProject.title}</h3>
                     <Link
-                      href={`/projects/${relatedProject.category}/${relatedProject.subcategory}/${relatedProject.id}`}
+                      href={`/projects/${relatedProject.category}/${relatedProject.subcategory.replace(/-/g, "")}/${relatedProject.id}`}
                       className="border border-white/30 text-sm md:text-base px-5 py-2 hover:bg-white/10 transition-colors"
                     >
                       View Detail
@@ -393,16 +287,10 @@ export default async function ProjectDetailPage({
 
       {/* CTA Section */}
       <section className="py-16 px-4 md:px-8 lg:px-16 bg-zinc-950 border-t border-zinc-900">
-        <AnimatedSection
-          animation="fade-in"
-          className="text-center max-w-3xl mx-auto"
-        >
-          <h2 className="text-3xl md:text-4xl font-light mb-6">
-            Ready to Start Your Project?
-          </h2>
+        <AnimatedSection animation="fade-in" className="text-center max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-light mb-6">Ready to Start Your Project?</h2>
           <p className="text-base md:text-lg text-gray-300 mb-8">
-            Let's create an exceptional space together. Contact us to discuss
-            your vision.
+            Let's create an exceptional space together. Contact us to discuss your vision.
           </p>
           <Link
             href="/"
@@ -417,46 +305,30 @@ export default async function ProjectDetailPage({
       <footer className="py-20 px-4 md:px-8 lg:px-16 border-t border-zinc-900">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
           <AnimatedSection animation="fade-in">
-            <h3 className="uppercase text-lg md:text-xl mb-6 tracking-wider">
-              woodyork.
-            </h3>
-            <p className="text-base text-gray-400 mb-3">
-              We're welcoming you always.
-            </p>
+            <h3 className="uppercase text-lg md:text-xl mb-6 tracking-wider">woodyork.</h3>
+            <p className="text-base text-gray-400 mb-3">We're welcoming you always.</p>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-in" delay={100}>
             <h3 className="text-lg md:text-xl mb-6">Quick links</h3>
             <ul className="text-base text-gray-400 space-y-3">
               <li>
-                <Link
-                  href="/about"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/about" className="hover:text-white transition-colors duration-300">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/services" className="hover:text-white transition-colors duration-300">
                   Services
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/projects"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/projects" className="hover:text-white transition-colors duration-300">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/contact"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/contact" className="hover:text-white transition-colors duration-300">
                   Contact
                 </Link>
               </li>
@@ -467,50 +339,32 @@ export default async function ProjectDetailPage({
             <h3 className="text-lg md:text-xl mb-6">Services</h3>
             <ul className="text-base text-gray-400 space-y-3">
               <li>
-                <Link
-                  href="/services#houses"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/services#houses" className="hover:text-white transition-colors duration-300">
                   Design of Houses
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services#interior"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/services#interior" className="hover:text-white transition-colors duration-300">
                   Interior Design
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services#exterior"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/services#exterior" className="hover:text-white transition-colors duration-300">
                   Exterior Design
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services#furniture"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/services#furniture" className="hover:text-white transition-colors duration-300">
                   Custom Furniture
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services#public"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/services#public" className="hover:text-white transition-colors duration-300">
                   Design of Public Objects
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services#construction"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/services#construction" className="hover:text-white transition-colors duration-300">
                   Construction
                 </Link>
               </li>
@@ -529,5 +383,5 @@ export default async function ProjectDetailPage({
         </div>
       </footer>
     </main>
-  );
+  )
 }

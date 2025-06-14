@@ -1,30 +1,27 @@
-"use client";
+"use client"
 
-import "@/styles/globals.css";
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { MapPin, Phone, Instagram, Mail } from "lucide-react";
-import { WhatsAppButton } from "@/components/whatsapp-button";
-import { AnimatedSection } from "@/components/animated-section";
-import { HoverCard } from "@/components/hover-card";
-import BlurText from "./components/BlurText/BlurText";
-import ShinyText from "./components/ShinyText/ShinyText";
-import CountUp from "./components/CountUp/CountUp";
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import ImageComparison from "@/components/ui/compare";
-import { Header } from "@/components/header";
-import { MobileMenu } from "@/components/mobile-menu";
-import { usePathname } from "next/navigation";
-import { Menu } from "lucide-react";
+import "@/styles/globals.css"
+import { useState } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import { MapPin, Phone, Instagram, Mail } from "lucide-react"
+import { WhatsAppButton } from "@/components/whatsapp-button"
+import { AnimatedSection } from "@/components/animated-section"
+import { HoverCard } from "@/components/hover-card"
+import BlurText from "../components/BlurText/BlurText"
+import ShinyText from "../components/ShinyText/ShinyText"
+import CountUp from "../components/CountUp/CountUp"
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards"
+import { Header } from "@/components/header"
+import { usePathname } from "next/navigation"
 
 export default function Home() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   const isActive = (path: string) => {
-    return pathname === path;
-  };
+    return pathname === path
+  }
 
   return (
     <main className="bg-black text-white min-h-screen">
@@ -34,47 +31,10 @@ export default function Home() {
       <section
         className="relative h-screen flex flex-col bg-cover bg-center"
         style={{
-          backgroundImage:
-            "url('https://res.cloudinary.com/dec19xsoi/image/upload/v1745780247/DSC01402_f4lehw.jpg')",
+          backgroundImage: "url('https://res.cloudinary.com/dec19xsoi/image/upload/v1745780247/DSC01402_f4lehw.jpg')",
         }}
       >
-        <Header/>
-        {/* <header className="p-6 flex justify-between items-center bg-black bg-opacity-90">
-          <Link href="/" className="text-xl font-light">
-            woodyork
-          </Link>
-          <nav className="hidden md:flex space-x-6 text-sm">
-            <Link
-              href="/about"
-              className="text-gray-400 hover:text-white transition"
-            >
-              about
-            </Link>
-            <Link
-              href="/projects"
-              className="text-gray-400 hover:text-white transition"
-            >
-              projects
-            </Link>
-            <Link
-              href="/services"
-              className="text-gray-400 hover:text-white transition"
-            >
-              services
-            </Link>
-          </nav>
-          <button
-            className="md:hidden text-base flex items-center"
-            onClick={() => setIsMobileMenuOpen(true)}
-            aria-label="Open menu"
-          >
-            <Menu size={24} />
-          </button>
-          <MobileMenu
-            isOpen={isMobileMenuOpen}
-            onClose={() => setIsMobileMenuOpen(false)}
-          />
-        </header> */}
+        <Header />
 
         <div className="flex-1 flex flex-col items-center justify-center relative">
           <span>
@@ -88,16 +48,8 @@ export default function Home() {
           </span>
 
           <AnimatedSection animation="fade-in" delay={0}>
-            <Link
-              href="/projects"
-              className="btn btn-secondary hover-lift text-base py-1 px-3 rounded-lg"
-            >
-              <ShinyText
-                text="Explore Projects"
-                disabled={false}
-                speed={3}
-                className="shiny-text"
-              />
+            <Link href="/projects" className="btn btn-secondary hover-lift text-base py-1 px-3 rounded-lg">
+              <ShinyText text="Explore Projects" disabled={false} speed={3} className="shiny-text" />
             </Link>
           </AnimatedSection>
         </div>
@@ -127,19 +79,14 @@ export default function Home() {
           <div className="flex flex-col justify-center">
             <AnimatedSection animation="slide-in-right" className="mb-8">
               <h3 className="text-2xl md:text-3xl mb-4">Hello.</h3>
-              <p className="text-base md:text-lg text-gray-400 mb-6">
-                Welcome to woodyork.
-              </p>
+              <p className="text-base md:text-lg text-gray-400 mb-6">Welcome to woodyork.</p>
               <p className="text-base md:text-lg text-gray-500 leading-relaxed">
-                woodyork adalah studio desain interior serta eksterior yang
-                menghadirkan ruang estetis dan fungsional. Sejak 2018, sebagai
-                vendor yang memiliki pengalaman bekerja secara profesional di
-                bidang manufaktur furnitur dan konstruksi interior untuk
-                perumahan, perkantoran, hotel dan ruang komersial, kami selalu
-                mendukung untuk mewujudkan imajinasi klien yang sesuai dengan
-                gaya dan kebutuhan. Karena kami percaya bahwa setiap ruang punya
-                cerita, dan kami ada untuk membuat cerita itu hidup dengan
-                desain yang personal dan harmonis.
+                woodyork adalah studio desain interior serta eksterior yang menghadirkan ruang estetis dan fungsional.
+                Sejak 2018, sebagai vendor yang memiliki pengalaman bekerja secara profesional di bidang manufaktur
+                furnitur dan konstruksi interior untuk perumahan, perkantoran, hotel dan ruang komersial, kami selalu
+                mendukung untuk mewujudkan imajinasi klien yang sesuai dengan gaya dan kebutuhan. Karena kami percaya
+                bahwa setiap ruang punya cerita, dan kami ada untuk membuat cerita itu hidup dengan desain yang personal
+                dan harmonis.
               </p>
             </AnimatedSection>
 
@@ -148,35 +95,17 @@ export default function Home() {
                 <div className="text-center">
                   <h3 className="text-5xl md:text-6xl font-light">
                     <div className="flex gap text-center">
-                      <CountUp
-                        from={0}
-                        to={200}
-                        separator=","
-                        direction="up"
-                        duration={1}
-                        className="count-up-text"
-                      />
+                      <CountUp from={0} to={200} separator="," direction="up" duration={1} className="count-up-text" />
                       <h3 className="mt-2">+</h3>
                     </div>
                   </h3>
-                  <p className="text-base md:text-lg text-gray-500">
-                    projects finished
-                  </p>
+                  <p className="text-base md:text-lg text-gray-500">projects finished</p>
                 </div>
                 <div className="text-center">
                   <h3 className="text-5xl md:text-6xl font-light">
-                    <CountUp
-                      from={0}
-                      to={60}
-                      separator=","
-                      direction="up"
-                      duration={1}
-                      className="count-up-text"
-                    />
+                    <CountUp from={0} to={60} separator="," direction="up" duration={1} className="count-up-text" />
                   </h3>
-                  <p className="text-base md:text-lg text-gray-500">
-                    projects in progress
-                  </p>
+                  <p className="text-base md:text-lg text-gray-500">projects in progress</p>
                 </div>
               </div>
             </AnimatedSection>
@@ -186,16 +115,10 @@ export default function Home() {
         {/* Testimonials */}
         <div className="mt-16">
           <AnimatedSection animation="fade-in">
-            <h3 className="text-base md:text-lg mb-0 tracking-widest">
-              Kata Mereka tentang woodyork:
-            </h3>
+            <h3 className="text-base md:text-lg mb-0 tracking-widest">Kata Mereka tentang woodyork:</h3>
           </AnimatedSection>
           <div className="h-[20rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-            <InfiniteMovingCards
-              items={testimonials}
-              direction="left"
-              speed="slow"
-            />
+            <InfiniteMovingCards items={testimonials} direction="left" speed="slow" />
           </div>
         </div>
       </section>
@@ -204,12 +127,8 @@ export default function Home() {
       <section className="section-padding">
         <AnimatedSection animation="fade-in" className="text-center mb-10">
           <h2>
-            <span className="uppercase text-base md:text-lg tracking-widest font-bold">
-              OUR{" "}
-            </span>
-            <span className="uppercase text-base md:text-lg font-light italic tracking-widest">
-              SERVICES
-            </span>
+            <span className="uppercase text-base md:text-lg tracking-widest font-bold">OUR </span>
+            <span className="uppercase text-base md:text-lg font-light italic tracking-widest">SERVICES</span>
           </h2>
         </AnimatedSection>
 
@@ -228,21 +147,12 @@ export default function Home() {
               delay={i * 100}
               className="border-b border-zinc-800 py-6 hover:border-zinc-600 transition-colors duration-300"
             >
-              <h3 className="text-base md:text-lg font-light uppercase tracking-wider">
-                {service}
-              </h3>
+              <h3 className="text-base md:text-lg font-light uppercase tracking-wider">{service}</h3>
             </AnimatedSection>
           ))}
 
-          <AnimatedSection
-            animation="fade-in"
-            delay={600}
-            className="flex justify-center mt-10"
-          >
-            <Link
-              href="/services"
-              className="btn btn-secondary hover-lift text-base md:text-lg"
-            >
+          <AnimatedSection animation="fade-in" delay={600} className="flex justify-center mt-10">
+            <Link href="/services" className="btn btn-secondary hover-lift text-base md:text-lg">
               Explore Services
             </Link>
           </AnimatedSection>
@@ -253,111 +163,90 @@ export default function Home() {
       <section className="section-padding">
         <AnimatedSection animation="fade-in" className="text-center mb-16">
           <h2>
-            <span className="uppercase text-base md:text-lg font-medium italic tracking-widest">
-              FEATURED{" "}
-            </span>
-            <span className="uppercase text-base md:text-lg tracking-widest font-bold">
-              PROJECT
-            </span>
+            <span className="uppercase text-base md:text-lg font-medium italic tracking-widest">FEATURED </span>
+            <span className="uppercase text-base md:text-lg tracking-widest font-bold">PROJECT</span>
           </h2>
         </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <AnimatedSection
-              animation="slide-in-left"
-              className="relative overflow-hidden rounded-sm"
-            >
-              <div className="absolute top-6 left-6 bg-black/70 text-base px-3 py-1 z-10">
-                Design
-              </div>
-              <Image
-                src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745895173/E3_igcygf.png"
-                width={500}
-                height={300}
-                alt="Project before"
-                className="w-full h-auto transition-transform duration-700 hover:scale-105"
-              />
-            </AnimatedSection>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          <AnimatedSection animation="slide-in-left" className="relative overflow-hidden rounded-sm">
+            <div className="absolute top-6 left-6 bg-black/70 text-base px-3 py-1 z-10">Design</div>
+            <Image
+              src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745895173/E3_igcygf.png"
+              width={500}
+              height={300}
+              alt="Project before"
+              className="w-full h-auto transition-transform duration-700 hover:scale-105"
+            />
+          </AnimatedSection>
 
-            <AnimatedSection
-              animation="slide-in-right"
-              className="relative overflow-hidden rounded-sm"
-            >
-              <div className="absolute top-6 left-6 bg-black/70 text-base px-3 py-1 z-10">
-                Reality
-              </div>
-              <Image
-                src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745895298/E33_umaptr.png"
-                width={500}
-                height={300}
-                alt="Project after"
-                className="w-full h-auto transition-transform duration-700 hover:scale-105"
-              />
-            </AnimatedSection>
-          </div>
+          <AnimatedSection animation="slide-in-right" className="relative overflow-hidden rounded-sm">
+            <div className="absolute top-6 left-6 bg-black/70 text-base px-3 py-1 z-10">Reality</div>
+            <Image
+              src="https://res.cloudinary.com/dec19xsoi/image/upload/v1745895298/E33_umaptr.png"
+              width={500}
+              height={300}
+              alt="Project after"
+              className="w-full h-auto transition-transform duration-700 hover:scale-105"
+            />
+          </AnimatedSection>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {[
             {
               title: "Modern Luxury",
               subtitle: "Store Design",
-              image:
-                "https://res.cloudinary.com/dec19xsoi/image/upload/v1745771486/F1_soorgo.png?height=200&width=400",
+              category: "commercial",
+              subcategory: "retail", // Changed from "store" to match data
+              image: "https://res.cloudinary.com/dec19xsoi/image/upload/v1745771486/F1_soorgo.png?height=200&width=400",
             },
             {
               title: "Modern Minimalist",
               subtitle: "Interior Design",
+              category: "residential",
+              subcategory: "livingroom", // URL format without hyphens
               image:
                 "https://res.cloudinary.com/dec19xsoi/image/upload/v1745772490/C24_qd9rq5.png?height=200&width=400",
             },
             {
               title: "Japanese Minimalist",
               subtitle: "Interior Design",
-              image:
-                "https://res.cloudinary.com/dec19xsoi/image/upload/v1745886493/B1_xjwric.png?height=200&width=400",
+              category: "residential",
+              subcategory: "bedroom", // URL format without hyphens
+              image: "https://res.cloudinary.com/dec19xsoi/image/upload/v1745886493/B1_xjwric.png?height=200&width=400",
             },
           ].map((project, i) => (
             <AnimatedSection key={i} animation="fade-in" delay={i * 200}>
               <HoverCard
                 hoverContent={
                   <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-amber-300 flex items-center justify-center">
-                    <span className="text-amber-300 text-2xl md:text-3xl font-serif">
-                      W.
-                    </span>
+                    <span className="text-amber-300 text-2xl md:text-3xl font-serif">W.</span>
                   </div>
                 }
               >
-                <div className="relative cursor-pointer">
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    width={400}
-                    height={200}
-                    alt={project.title}
-                    className="w-full h-auto rounded-sm"
-                  />
-                  <div className="absolute bottom-6 left-6">
-                    <h3 className="text-lg md:text-xl font-medium">
-                      {project.title}
-                    </h3>
-                    <p className="text-base text-gray-300">
-                      {project.subtitle}
-                    </p>
+                <Link href={`/projects/${project.category}/${project.subcategory}`}>
+                  <div className="relative cursor-pointer">
+                    <Image
+                      src={project.image || "/placeholder.svg"}
+                      width={400}
+                      height={200}
+                      alt={project.title}
+                      className="w-full h-auto rounded-sm"
+                    />
+                    <div className="absolute bottom-6 left-6">
+                      <h3 className="text-lg md:text-xl font-medium">{project.title}</h3>
+                      <p className="text-base text-gray-300">{project.subtitle}</p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </HoverCard>
             </AnimatedSection>
           ))}
         </div>
 
-        <AnimatedSection
-          animation="fade-in"
-          delay={600}
-          className="flex justify-center"
-        >
-          <Link
-            href="/projects"
-            className="btn btn-secondary hover-lift text-base md:text-lg"
-          >
+        <AnimatedSection animation="fade-in" delay={600} className="flex justify-center">
+          <Link href="/projects" className="btn btn-secondary hover-lift text-base md:text-lg">
             View All Projects
           </Link>
         </AnimatedSection>
@@ -366,32 +255,22 @@ export default function Home() {
       {/* Contact Section */}
       <section className="py-16 px-4 md:px-8 lg:px-16 bg-zinc-950">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-light mb-12 text-center">
-            Konsultasi Sekarang
-          </h2>
+          <h2 className="text-2xl font-light mb-12 text-center">Konsultasi Sekarang</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-zinc-900 p-8 rounded-sm flex flex-col items-center text-center">
               <MapPin className="w-8 h-8 mb-4 text-amber-300" />
               <h3 className="text-lg font-medium mb-2">Lokasi Woodyork</h3>
-              <p className="text-sm text-gray-300">
-                Perumahan Graha Pakis Permai, Blok C20, Malang, Jawa Timur
-              </p>
+              <p className="text-sm text-gray-300">Perumahan Graha Pakis Permai, Blok C20, Malang, Jawa Timur</p>
             </div>
             <div className="bg-zinc-900 p-8 rounded-sm flex flex-col items-center text-center">
               <Phone className="w-8 h-8 mb-4 text-amber-300" />
               <h3 className="text-lg font-medium mb-2">Telepon & Whatsapp</h3>
               <p className="text-sm text-gray-300"> +62 812 3095 2808</p>
-              {/* <p className="text-sm text-gray-300 mt-2">
-                Senin - Jumat: 9.00 - 18.00
-              </p> */}
             </div>
             <div className="bg-zinc-900 p-8 rounded-sm flex flex-col items-center text-center">
               <Mail className="w-8 h-8 mb-4 text-amber-300" />
               <h3 className="text-lg font-medium mb-2">Hubungi Via Email</h3>
               <p className="text-sm text-gray-300">woodyork.id@gmail.com</p>
-              {/* <p className="text-sm text-gray-300 mt-2">
-                We'll respond within 24 hours
-              </p> */}
             </div>
           </div>
         </div>
@@ -401,46 +280,30 @@ export default function Home() {
       <footer className="py-20 px-4 md:px-8 lg:px-16 border-t border-zinc-900">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
           <AnimatedSection animation="fade-in">
-            <h3 className="uppercase text-lg md:text-xl mb-6 tracking-wider">
-              woodyork.
-            </h3>
-            <p className="text-base text-gray-400 mb-3">
-              We're welcoming you always.
-            </p>
+            <h3 className="uppercase text-lg md:text-xl mb-6 tracking-wider">woodyork.</h3>
+            <p className="text-base text-gray-400 mb-3">We're welcoming you always.</p>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-in" delay={100}>
             <h3 className="text-lg md:text-xl mb-6">Quick links</h3>
             <ul className="text-base text-gray-400 space-y-3">
               <li>
-                <Link
-                  href="/about"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/about" className="hover:text-white transition-colors duration-300">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/services" className="hover:text-white transition-colors duration-300">
                   Services
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/projects"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/projects" className="hover:text-white transition-colors duration-300">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/contact"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/contact" className="hover:text-white transition-colors duration-300">
                   Contact
                 </Link>
               </li>
@@ -451,50 +314,32 @@ export default function Home() {
             <h3 className="text-lg md:text-xl mb-6">Services</h3>
             <ul className="text-base text-gray-400 space-y-3">
               <li>
-                <Link
-                  href="/services#houses"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/services#houses" className="hover:text-white transition-colors duration-300">
                   Design of Houses
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services#interior"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/services#interior" className="hover:text-white transition-colors duration-300">
                   Interior Design
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services#exterior"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/services#exterior" className="hover:text-white transition-colors duration-300">
                   Exterior Design
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services#furniture"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/services#furniture" className="hover:text-white transition-colors duration-300">
                   Custom Furniture
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services#public"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/services#public" className="hover:text-white transition-colors duration-300">
                   Design of Public Objects
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services#construction"
-                  className="hover:text-white transition-colors duration-300"
-                >
+                <Link href="/services#construction" className="hover:text-white transition-colors duration-300">
                   Construction
                 </Link>
               </li>
@@ -504,10 +349,7 @@ export default function Home() {
           <AnimatedSection animation="fade-in" delay={300}>
             <h3 className="text-lg md:text-xl mb-6">Follow Us</h3>
             <div className="flex gap-4">
-              <Link
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
-              >
+              <Link href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
                 <Instagram className="w-7 h-7" />
               </Link>
             </div>
@@ -521,13 +363,12 @@ export default function Home() {
         </div>
       </footer>
     </main>
-  );
+  )
 }
 
 const testimonials = [
   {
-    quote:
-      "“My favorite interior designer. Always giving the best quality of result”",
+    quote: "“My favorite interior designer. Always giving the best quality of result”",
     name: "Mrs. Farida (madura)",
     title: "",
   },
@@ -558,4 +399,4 @@ const testimonials = [
     name: " Mrs. Aghnia (malang)",
     title: "",
   },
-];
+]
