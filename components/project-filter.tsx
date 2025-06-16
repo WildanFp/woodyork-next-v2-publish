@@ -1,160 +1,168 @@
-"use client";
+"use client"
 
-import { useState, useEffect } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
-import { AnimatedSection } from "@/components/animated-section";
+import { useState, useEffect } from "react"
+import { useRouter, usePathname } from "next/navigation"
 
 interface ProjectFilterProps {
-  initialCategory?: string;
-  initialSubcategory?: string;
+  initialCategory?: string
+  initialSubcategory?: string
 }
 
-export function ProjectFilter({
-  initialCategory = "all",
-  initialSubcategory = "",
-}: ProjectFilterProps) {
-  const router = useRouter();
-  const searchParams = useSearchParams();
+export function ProjectFilter({ initialCategory = "", initialSubcategory = "" }: ProjectFilterProps) {
+  const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory)
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string>(initialSubcategory)
+  const router = useRouter()
+  const pathname = usePathname()
 
-  const [activeCategory, setActiveCategory] = useState(initialCategory);
-  const [activeSubcategory, setActiveSubcategory] =
-    useState(initialSubcategory);
+  const categories = [
+    { value: "", label: "All Projects" },
+    { value: "commercial", label: "Commercial Projects" },
+    { value: "residential", label: "Residential Projects" },
+  ]
 
-  // Initialize state from URL params
-  useEffect(() => {
-    const category = searchParams.get("category") || "all";
-    const subcategory = searchParams.get("subcategory") || "";
+  const subcategories: Record<string, { value: string; label: string }[]> = {
+    residential: [
+      { value: "bathroom", label: "Bathroom" },
+      { value: "bedroom", label: "Bedroom" },
+      { value: "family-room", label: "Family Room" },
+      { value: "facade", label: "Facade" },
+      { value: "kids-bedroom", label: "Kids Bedroom" },
+      { value: "kitchen-set", label: "Kitchen Set" },
+      { value: "living-room", label: "Living Room" },
+      { value: "arabic-majlis", label: "Arabic Majlis" },
+      { value: "musholla", label: "Musholla" },
+      { value: "rooftop", label: "Rooftop" },
+    ],
+    commercial: [
+      { value: "coffee-shop", label: "Coffee Shop" },
+      { value: "boarding", label: "Boarding" },
+      { value: "office", label: "Office" },
+      { value: "store", label: "Store" },
+    ],
+  }
 
-    setActiveCategory(category);
-    setActiveSubcategory(subcategory);
-  }, [searchParams]);
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category)
+    setSelectedSubcategory("")
 
-  // Update URL when filters change without scrolling to top
-  const updateFilters = (category: string, subcategory = "") => {
-    const params = new URLSearchParams(searchParams.toString());
-
-    // Clear existing params if switching to "all"
-    if (category === "all") {
-      params.delete("category");
-      params.delete("subcategory");
+    if (!category) {
+      router.push("/projects")
     } else {
-      params.set("category", category);
-
-      if (subcategory) {
-        params.set("subcategory", subcategory);
-      } else {
-        params.delete("subcategory");
-      }
+      router.push(`/projects/${category}`)
     }
+  }
 
-    const newUrl = `/projects${
-      params.toString() ? `?${params.toString()}` : ""
-    }`;
+  const handleSubcategoryChange = (subcategory: string) => {
+    setSelectedSubcategory(subcategory)
 
-    // Use the replace option to update URL without adding to history stack
-    // Use scroll: false to prevent scrolling to top
-    router.push(newUrl, { scroll: false });
+    if (!selectedCategory) {
+      router.push("/projects")
+    } else if (!subcategory) {
+      router.push(`/projects/${selectedCategory}`)
+    } else {
+      // Convert subcategory with hyphens to URL format (remove hyphens)
+      const convertToUrlFormat = (hyphenatedSubcategory: string): string => {
+        const mappings: Record<string, string> = {
+          "kids-bedroom": "kidsbedroom",
+          "coffee-shop": "coffeeshop",
+          "living-room": "livingroom",
+          "dining-room": "diningroom",
+          "home-office": "homeoffice",
+          "family-room": "familyroom",
+          "arabic-majlis": "arabicmajlis",
+          "kitchen-set": "kitchenset",
+        }
 
-    setActiveCategory(category);
-    setActiveSubcategory(subcategory);
-  };
+        return mappings[hyphenatedSubcategory.toLowerCase()] || hyphenatedSubcategory.replace(/-/g, "")
+      }
 
-  // Commercial subcategories
-  const commercialSubcategories = [
-    { id: "coffee-shop", label: "Coffee Shop" },
-    { id: "boarding", label: "Boarding" },
-    { id: "office", label: "Office" },
-    { id: "store", label: "Store" },
-  ];
+      const urlSubcategory = convertToUrlFormat(subcategory)
+      router.push(`/projects/${selectedCategory}/${urlSubcategory}`)
+    }
+  }
 
-  // Residential subcategories
-  const residentialSubcategories = [
-    { id: "bathroom", label: "Bathroom" },
-    { id: "bedroom", label: "Bedroom" },
-    { id: "family-room", label: "Family Room" },
-    { id: "facade", label: "Facade" },
-    { id: "kids-bedroom", label: "Kids Bedroom" },
-    { id: "kitchen-set", label: "Kitchen Set" },
-    { id: "living-room", label: "Living Room" },
-    { id: "arabic-majlis", label: "Arabic Majlis" },
-    { id: "musholla", label: "Musholla" },
-    { id: "rooftop", label: "Rooftop" },
-  ];
+  // Update state when URL changes
+  useEffect(() => {
+    const pathSegments = pathname.split("/").filter(Boolean)
+
+    if (pathSegments.length >= 2 && pathSegments[0] === "projects") {
+      const categoryFromPath = pathSegments[1]
+      const subcategoryFromPath = pathSegments[2]
+
+      if (categoryFromPath && (categoryFromPath === "residential" || categoryFromPath === "commercial")) {
+        setSelectedCategory(categoryFromPath)
+
+        if (subcategoryFromPath) {
+          // Convert URL subcategory back to hyphenated format
+          const convertUrlToHyphenated = (urlSubcategory: string): string => {
+            const mappings: Record<string, string> = {
+              kidsbedroom: "kids-bedroom",
+              coffeeshop: "coffee-shop",
+              livingroom: "living-room",
+              diningroom: "dining-room",
+              homeoffice: "home-office",
+              familyroom: "family-room",
+              arabicmajlis: "arabic-majlis",
+              kitchenset: "kitchen-set",
+            }
+
+            return (
+              mappings[urlSubcategory.toLowerCase()] || urlSubcategory.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase()
+            )
+          }
+
+          const hyphenatedSubcategory = convertUrlToHyphenated(subcategoryFromPath)
+          setSelectedSubcategory(hyphenatedSubcategory)
+        } else {
+          setSelectedSubcategory("")
+        }
+      } else {
+        setSelectedCategory("")
+        setSelectedSubcategory("")
+      }
+    } else {
+      setSelectedCategory("")
+      setSelectedSubcategory("")
+    }
+  }, [pathname])
 
   return (
-    <section className="py-12 px-4 md:px-8 lg:px-16">
-      <AnimatedSection animation="fade-in">
-        {/* Main Categories */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
-          <button
-            className={`px-6 py-3 text-base md:text-lg rounded-sm transition-colors ${
-              activeCategory === "all"
-                ? "bg-white text-black"
-                : "bg-zinc-900 text-white hover:bg-zinc-800"
-            }`}
-            onClick={() => updateFilters("all")}
-          >
-            All Projects
-          </button>
-          <button
-            className={`px-6 py-3 text-base md:text-lg rounded-sm transition-colors ${
-              activeCategory === "commercial"
-                ? "bg-white text-black"
-                : "bg-zinc-900 text-white hover:bg-zinc-800"
-            }`}
-            onClick={() => updateFilters("commercial")}
-          >
-            Commercial Projects
-          </button>
-          <button
-            className={`px-6 py-3 text-base md:text-lg rounded-sm transition-colors ${
-              activeCategory === "residential"
-                ? "bg-white text-black"
-                : "bg-zinc-900 text-white hover:bg-zinc-800"
-            }`}
-            onClick={() => updateFilters("residential")}
-          >
-            Residential Projects
-          </button>
+    <section className="py-8 px-4 md:px-8 lg:px-16 bg-black">
+      <div className="max-w-6xl mx-auto">
+        {/* Category Tabs */}
+        <div className="flex flex-wrap justify-center gap-3 mb-6">
+          {categories.map((category) => (
+            <button
+              key={category.value}
+              onClick={() => handleCategoryChange(category.value)}
+              className={`px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 rounded-full ${
+                selectedCategory === category.value ? "bg-white text-black" : "bg-zinc-800 text-white hover:bg-zinc-700"
+              }`}
+            >
+              {category.label}
+            </button>
+          ))}
         </div>
 
-        {/* Subcategories - only show if a main category is selected */}
-        {activeCategory === "commercial" && (
-          <div className="flex flex-wrap justify-center gap-3 mb-6">
-            {commercialSubcategories.map((subcategory) => (
+        {/* Subcategory Tabs */}
+        {selectedCategory && subcategories[selectedCategory] && (
+          <div className="flex flex-wrap justify-center gap-2">
+            {subcategories[selectedCategory].map((subcategory) => (
               <button
-                key={subcategory.id}
-                className={`px-4 py-2 text-sm md:text-base rounded-sm transition-colors ${
-                  activeSubcategory === subcategory.id
-                    ? "bg-amber-300 text-black"
+                key={subcategory.value}
+                onClick={() => handleSubcategoryChange(subcategory.value)}
+                className={`px-4 py-2 text-sm md:text-base font-medium transition-all duration-300 rounded-full ${
+                  selectedSubcategory === subcategory.value
+                    ? "bg-amber-400 text-black"
                     : "bg-zinc-800 text-white hover:bg-zinc-700"
                 }`}
-                onClick={() => updateFilters("commercial", subcategory.id)}
               >
                 {subcategory.label}
               </button>
             ))}
           </div>
         )}
-
-        {activeCategory === "residential" && (
-          <div className="flex flex-wrap justify-center gap-3 mb-6">
-            {residentialSubcategories.map((subcategory) => (
-              <button
-                key={subcategory.id}
-                className={`px-4 py-2 text-sm md:text-base rounded-sm transition-colors ${
-                  activeSubcategory === subcategory.id
-                    ? "bg-amber-300 text-black"
-                    : "bg-zinc-800 text-white hover:bg-zinc-700"
-                }`}
-                onClick={() => updateFilters("residential", subcategory.id)}
-              >
-                {subcategory.label}
-              </button>
-            ))}
-          </div>
-        )}
-      </AnimatedSection>
+      </div>
     </section>
-  );
+  )
 }
