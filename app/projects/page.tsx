@@ -15,11 +15,12 @@ interface SearchParams {
 export default async function ProjectsPage({
   searchParams,
 }: {
-  searchParams: SearchParams
+  searchParams: Promise<SearchParams>
 }) {
   // Redirect old query-based URLs to new path-based URLs
-  const category = searchParams?.category
-  const subcategory = searchParams?.subcategory
+  const resolvedSearchParams = await searchParams
+  const category = resolvedSearchParams?.category
+  const subcategory = resolvedSearchParams?.subcategory
 
   if (category && (category === "commercial" || category === "residential")) {
     if (subcategory) {

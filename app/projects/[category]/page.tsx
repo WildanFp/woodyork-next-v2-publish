@@ -9,13 +9,13 @@ import type { ProjectCategory } from "@/lib/projects"
 import { Header } from "@/components/header"
 
 interface CategoryPageProps {
-  params: {
+  params: Promise<{
     category: string
-  }
+  }>
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
-  const { category } = params
+  const { category } = await params
 
   if (!category || (category !== "commercial" && category !== "residential")) {
     notFound()
