@@ -9,15 +9,15 @@ import { Header } from "@/components/header"
 import Head from "next/head"
 
 interface ProjectDetailPageProps {
-  params: {
+  params: Promise<{
     category: string
     subcategory: string
     id: string
-  }
+  }>
 }
 
 export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) {
-  const { id, category, subcategory } = params
+  const { id, category, subcategory } = await params
 
   if (!id || !category || !subcategory) {
     notFound()
