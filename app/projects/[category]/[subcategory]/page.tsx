@@ -9,14 +9,14 @@ import type { ProjectCategory, ProjectSubcategory } from "@/lib/projects"
 import { Header } from "@/components/header"
 
 interface SubcategoryPageProps {
-  params: {
+  params: Promise<{
     category: string
     subcategory: string
-  }
+  }>
 }
 
 export default async function SubcategoryPage({ params }: SubcategoryPageProps) {
-  const { category, subcategory } = params
+  const { category, subcategory } = await params
 
   if (!category || (category !== "commercial" && category !== "residential")) {
     notFound()
